@@ -1,0 +1,23 @@
+*, *::before, *::after{
+    color-scheme: only light;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    border: none;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+*, *::after, *::before{
+    outline: none;
+    cursor: default;
+}
+
+img, svg, video{
+    display: block;
+    max-width: 100%;
+}

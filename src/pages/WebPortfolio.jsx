@@ -1,3 +1,5 @@
+import styles from "./WebPortfolio.module.css";
+
 export default function WebPortfolio({ })
 {
     return (

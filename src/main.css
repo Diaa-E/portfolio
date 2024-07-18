@@ -10,9 +10,10 @@
 }
 
 #root {
+  position: relative;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  min-height: 100dvh;
   text-align: center;
 }
 
@@ -28,7 +29,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }

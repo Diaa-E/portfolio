@@ -1,0 +1,15 @@
+.nav-bar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    padding: 2rem;
+}
+
+.link-list{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}

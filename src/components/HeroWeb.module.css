@@ -1,0 +1,10 @@
+.hero{
+
+}
+
+.title{
+    margin: 0 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

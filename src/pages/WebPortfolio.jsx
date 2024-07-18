@@ -1,3 +1,4 @@
+import HeroWeb from "../components/HeroWeb";
 import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
@@ -21,7 +22,7 @@ export default function WebPortfolio({ })
                     }
                 ]}
             />
-            <h1>Web</h1>
+            <HeroWeb />
         </>
     )
 }

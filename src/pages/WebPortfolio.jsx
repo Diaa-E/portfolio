@@ -2,6 +2,9 @@ import HeroWeb from "../components/HeroWeb";
 import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
+import githubIcon from "../assets/icons/github.svg"
+import SocialLinks from "../components/SocialLinks";
+
 export default function WebPortfolio({ })
 {
     return (
@@ -23,6 +26,20 @@ export default function WebPortfolio({ })
                 ]}
             />
             <HeroWeb />
+            <SocialLinks
+                socialLinks={[
+                    {
+                        name: "Github",
+                        to: "https://github.com",
+                        icon: githubIcon
+                    },
+                    {
+                        name: "Github",
+                        to: "https://github.com",
+                        icon: githubIcon
+                    }
+                ]}
+            />
         </>
     )
 }

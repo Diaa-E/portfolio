@@ -1,0 +1,12 @@
+.social-links-wrapper{
+    display: flex;
+    gap: 20px;
+    justify-items: center;
+    justify-content: center;
+    margin: 3rem 0 0 0;
+}
+
+.social-link-icon{
+    max-height: 50px;
+    max-width: 50px;
+}

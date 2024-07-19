@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "minim";
+    src: url("./assets/fonts/minim.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "BPneon";
+    src: url("./assets/fonts/BPneon.otf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "digitag";
+    src: url("./assets/fonts/Digitag.ttf");
+    font-weight: normal;
+}
+
+:root{
+    --background: #1a1a1a;
+    --background-trans: #1a1a1abf;
+    --none: rgba(0, 0, 0, 0);
+    --text: #f2f2f2;
+    --neon-pink: #ffa2e8;
+    --neon-yellow: #d8fe7c;
+
+    --neon-pink-off: #ff5bd696;
+    --neon-yellow-off: #748e36;
+
+    --glow-pink: 
+        0 0 5px var(--neon-pink),
+        0 0 10px var(--neon-pink-off),
+        0 0 10px var(--neon-pink-off),
+        0 0 10px var(--neon-pink-off),
+        0 0 10px var(--neon-pink-off),
+        0 0 10px var(--neon-pink-off),
+        0 0 10px var(--neon-pink-off);
+
+    --glow-yellow: 
+        0 0 5px var(--neon-yellow),
+        0 0 10px var(--neon-yellow-off),
+        0 0 10px var(--neon-yellow-off),
+        0 0 10px var(--neon-yellow-off),
+        0 0 10px var(--neon-yellow-off),
+        0 0 10px var(--neon-yellow-off),
+        0 0 10px var(--neon-yellow-off);
+
+    --font-neon-1: "minim", sans-serif;
+    --font-neon-2: "BPneon", sans-serif;
+    --font-graffiti-1: "digitag", sans-serif;
+}

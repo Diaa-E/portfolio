@@ -1,5 +1,4 @@
 .hero{
-    composes: background-large from "../common.module.css";
     display: flex;
     place-items: center;
 }
@@ -21,7 +20,7 @@
 }
 
 .graffiti-two{
-    font-family: var(--font-graffiti-1);
+    font-family: var(--font-graffiti-2);
     color: var(--graffiti-green);
     transform: translateX(50px);
     font-size: 4rem;

@@ -1,10 +1,46 @@
 .hero{
-
+    composes: background-large from "../common.module.css";
+    background-image: url("../assets/images/hero_desktop.webp");
+    display: flex;
+    place-items: center;
 }
 
 .title{
-    margin: 0 0 0 50%;
+    user-select: none;
     display: flex;
+    margin: 0 0 0 45%;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 500px;
+    text-align: left;
+}
+
+.graffiti-one{
+    font-family: var(--font-graffiti-1);
+    color: var(--graffiti-magenta);
+    transform: translateX(200px) translateY(50px) rotate(30deg);
+    font-size: 4rem;
+}
+
+.graffiti-two{
+    font-family: var(--font-graffiti-1);
+    color: var(--graffiti-green);
+    transform: translateX(50px);
+    font-size: 4rem;
+}
+
+.neon-one{
+    font-family: var(--font-neon-1);
+    color: var(--neon-blue);
+    background-image: var(--backlight-blue);
+    text-shadow: var(--glow-blue);
+    font-size: 5rem;
+}
+
+.neon-two{
+    font-family: var(--font-neon-2);
+    color: var(--neon-gold);
+    background-image: var(--backlight-gold);
+    text-shadow: var(--glow-gold);
+    font-size: 5rem;
 }

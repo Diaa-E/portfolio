@@ -9,7 +9,7 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}] }
             {
                 scrollAnchors.map(anchor => (
                     <li key={anchor.to}>
-                        <Link to={anchor.to}>{anchor.text}</Link>
+                        <a href={anchor.to}>{anchor.text}</a>
                     </li>
                 ))
             }

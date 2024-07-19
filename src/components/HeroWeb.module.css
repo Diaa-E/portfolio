@@ -1,6 +1,5 @@
 .hero{
     composes: background-large from "../common.module.css";
-    background-image: url("../assets/images/hero_desktop.webp");
     display: flex;
     place-items: center;
 }
@@ -8,10 +7,9 @@
 .title{
     user-select: none;
     display: flex;
-    margin: 0 0 0 45%;
+    margin: 0 auto 3rem auto;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 500px;
     text-align: left;
 }
 
@@ -35,9 +33,11 @@
     background-image: var(--backlight-blue);
     text-shadow: var(--glow-blue);
     font-size: 5rem;
+    margin-left: -100px;
 }
 
 .neon-two{
+    text-align: center;
     font-family: var(--font-neon-2);
     color: var(--neon-gold);
     background-image: var(--backlight-gold);

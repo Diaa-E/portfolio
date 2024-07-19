@@ -3,13 +3,11 @@
     display: flex;
     place-items: center;
     place-content: center;
-    background-image: url("../assets/images/topic_desktop.webp");
 }
 
 .links-wrapper{
     display: flex;
     gap: 350px;
-    padding-right: 150px;
 }
 
 .links-wrapper>li{

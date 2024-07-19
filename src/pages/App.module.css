@@ -1,8 +1,28 @@
 .topic-background{
-    composes: background-large from "../common.module.css";
     display: flex;
-    place-items: center;
-    place-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-around;
+    height: 100dvh;
+}
+
+.graffiti-one{
+    font-family: var(--font-graffiti-2);
+    color: var(--graffiti-magenta);
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.graffiti-two{
+    transform:rotate(15deg);
+    font-size: 7rem;
+    font-family: var(--font-graffiti-2);
+    color: var(--graffiti-green);
 }
 
 .links-wrapper{

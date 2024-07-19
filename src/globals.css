@@ -27,6 +27,9 @@
     --neon-pink-off: #ff5bd696;
     --neon-yellow-off: #748e36;
 
+    --backlight-pink: radial-gradient(closest-side, var(--neon-pink-off), var(--none));
+    --backlight-yellow: radial-gradient(closest-side, var(--neon-yellow-off), var(--none));
+
     --glow-pink: 
         0 0 5px var(--neon-pink),
         0 0 10px var(--neon-pink-off),
@@ -35,7 +38,6 @@
         0 0 10px var(--neon-pink-off),
         0 0 10px var(--neon-pink-off),
         0 0 10px var(--neon-pink-off);
-
     --glow-yellow: 
         0 0 5px var(--neon-yellow),
         0 0 10px var(--neon-yellow-off),

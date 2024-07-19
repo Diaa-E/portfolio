@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 function App() {
 
   return (
-    <ul>
-      <li>
-        <Link to={"web"}>Web Portfolio</Link>
-      </li>
-      <li>
-        <Link to={"art"}>Art Portfolio</Link>
-      </li>
-    </ul>
+    <div className={styles["topic-background"]}>
+      <ul className={styles["links-wrapper"]}>
+        <li>
+          <Link className={styles["web-link"]} to={"web"}>Web <br /> Development</Link>
+        </li>
+        <li>
+          <Link className={styles["art-link"]} to={"art"}>3D Art</Link>
+        </li>
+      </ul>
+    </div>
   )
 }
 

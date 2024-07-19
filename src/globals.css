@@ -35,6 +35,8 @@
     --neon-blue: #afcdff;
     --neon-gold: #ffe7af;
 
+    --filter-neon-blue: brightness(0) invert(75%) sepia(4%) saturate(4797%) hue-rotate(189deg) brightness(106%) contrast(100%);
+
     --neon-pink-off: #ff5bd696;
     --neon-yellow-off: #748e36;
     --neon-blue-off: #365c9d;

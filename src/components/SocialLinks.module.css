@@ -3,10 +3,34 @@
     gap: 20px;
     justify-items: center;
     justify-content: center;
-    margin: 3rem 0 0 0;
+    margin: 5rem 0 0 0;
+}
+
+.social-link, .social-link:visited{
+    color: var(--text);
+    display: flex;
+    gap: 10px;
+}
+
+.link-text{
+    font-family: var(--font-default);
+    cursor: pointer;
+    width: 0;
+    overflow: hidden;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.social-link:hover .link-text{
+    width: 50px;
+}
+
+.social-link:hover{
+    filter: var(--filter-neon-blue);
 }
 
 .social-link-icon{
-    max-height: 50px;
-    max-width: 50px;
+    cursor: pointer;
+    max-height: 30px;
+    max-width: 30px;
 }

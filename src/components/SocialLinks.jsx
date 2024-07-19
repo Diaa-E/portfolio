@@ -7,13 +7,18 @@ export default function SocialLinks({ socialLinks = [] })
         {
             socialLinks.map(link => (
                 <li key={link.to}>
-                    <a href={link.to} aria-label={link.name}>
+                    <a href={link.to} className={styles["social-link"]}>
                         <img
                             className={styles["social-link-icon"]}
                             src={link.icon}
                             alt={link.name}
                             aria-hidden
                         />
+                        <span className={styles["link-text"]}>
+                        {
+                            link.name
+                        }
+                    </span>
                     </a>
                 </li>
             ))

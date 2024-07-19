@@ -16,6 +16,12 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: "kanit";
+    src: url("./assets/fonts/Kanit-Regular.ttf");
+    font-weight: normal;
+}
+
 :root{
     --background: #1a1a1a;
     --background-trans: #1a1a1abf;
@@ -75,4 +81,5 @@
     --font-neon-1: "minim", sans-serif;
     --font-neon-2: "BPneon", sans-serif;
     --font-graffiti-1: "digitag", sans-serif;
+    --font-default: "kanit", sans-serif;
 }

@@ -6,8 +6,15 @@ export default function SocialLinks({ socialLinks = [] })
         <ul className={styles["social-links-wrapper"]}>
         {
             socialLinks.map(link => (
-                <li>
-                    <a href={link.to}><img className={styles["social-link-icon"]} src={link.icon} alt={link.name} /></a>
+                <li key={link.to}>
+                    <a href={link.to} aria-label={link.name}>
+                        <img
+                            className={styles["social-link-icon"]}
+                            src={link.icon}
+                            alt={link.name}
+                            aria-hidden
+                        />
+                    </a>
                 </li>
             ))
         }

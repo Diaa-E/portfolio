@@ -1,7 +1,7 @@
 .bricks-background{
     background-size: 1000px;
     background-position: top;
-    background-repeat: repeat
+    background-repeat: repeat-y;
 }
 
 .section-header{

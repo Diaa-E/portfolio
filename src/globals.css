@@ -40,6 +40,7 @@
     --neon-yellow: #d8fe7c;
     --neon-blue: #afcdff;
     --neon-gold: #ffe7af;
+    --neon-green: #a2ffaf;
 
     --filter-neon-blue: brightness(0) invert(75%) sepia(4%) saturate(4797%) hue-rotate(189deg) brightness(106%) contrast(100%);
 
@@ -47,11 +48,13 @@
     --neon-yellow-off: #748e36;
     --neon-blue-off: #365c9d;
     --neon-gold-off: #7e652a;
+    --neon-green-off: #237a2e;
 
     --backlight-pink: radial-gradient(closest-side, var(--neon-pink-off), var(--none));
     --backlight-yellow: radial-gradient(closest-side, var(--neon-yellow-off), var(--none));
     --backlight-blue: radial-gradient(closest-side, var(--neon-blue-off), var(--none));
     --backlight-gold: radial-gradient(closest-side, var(--neon-gold-off), var(--none));
+    --backlight-green: radial-gradient(closest-side, var(--neon-green-off), var(--none));
 
     --glow-pink: 
         0 0 5px var(--neon-pink),
@@ -85,6 +88,14 @@
         0 0 10px var(--neon-gold-off),
         0 0 10px var(--neon-gold-off),
         0 0 10px var(--neon-gold-off);
+    --glow-green: 
+        0 0 5px var(--neon-green),
+        0 0 10px var(--neon-green-off),
+        0 0 10px var(--neon-green-off),
+        0 0 10px var(--neon-green-off),
+        0 0 10px var(--neon-green-off),
+        0 0 10px var(--neon-green-off),
+        0 0 10px var(--neon-green-off);
 
     --font-neon-1: "minim", sans-serif;
     --font-neon-2: "BPneon", sans-serif;

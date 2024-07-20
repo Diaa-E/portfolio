@@ -8,6 +8,7 @@
     align-content: center;
     justify-content: space-around;
     height: 100dvh;
+    user-select: none;
 }
 
 .graffiti-one{

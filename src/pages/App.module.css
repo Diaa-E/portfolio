@@ -1,4 +1,6 @@
 .topic-background{
+    composes: bricks-background from "../common.module.css";
+    background-image: url("../assets/images/bricks_background.webp");
     display: flex;
     flex-direction: column;
     align-items: center;

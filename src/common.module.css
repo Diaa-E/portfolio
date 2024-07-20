@@ -4,6 +4,10 @@
     background-repeat: repeat-y;
 }
 
+.parallax{
+    background-attachment: fixed;
+}
+
 .bio{
     font-family: var(--font-default);
     color: var(--text);

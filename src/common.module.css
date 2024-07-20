@@ -4,6 +4,13 @@
     background-repeat: repeat
 }
 
+.section-header{
+    display: flex;
+    place-items: center;
+    place-content: center;
+    margin: 0 auto 10rem auto;
+}
+
 .parallax{
     background-attachment: fixed;
 }

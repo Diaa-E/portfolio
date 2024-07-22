@@ -1,0 +1,17 @@
+.web-project-item{
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+    background-position: center;
+    justify-items: center;
+    justify-content: space-between;
+    overflow: clip;
+}
+
+.web-project-title{
+    padding: 2rem 0 2rem 0;
+    color: var(--text);
+    font-family: var(--font-default);
+    font-size: 1.5rem;
+    text-align: left;
+}

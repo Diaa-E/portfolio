@@ -4,6 +4,8 @@ import styles from "./WebPortfolio.module.css";
 
 import githubIcon from "../assets/icons/github.svg"
 import SocialLinks from "../components/SocialLinks";
+import { webProjects } from "../data/webProjects";
+import WebWorkItem from "../components/WebProjectItem";
 
 export default function WebPortfolio({ }) {
     return (
@@ -51,6 +53,19 @@ export default function WebPortfolio({ }) {
                     <span>Work</span>
                 </h2>
             </div>
+            <ul className={styles["projects-list"]}>
+            {
+                webProjects.map(project => {
+                    return (
+                        <WebWorkItem
+                            name={project.name}
+                            livePreview={project.livePreview}
+                            source={project.source}
+                        />
+                    )
+                })
+            }
+            </ul>
             <div id="skills" className={styles["skills-header"]}>
                 <h2 className={styles["skills-title"]}>
                     <span>My</span>

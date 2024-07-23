@@ -20,9 +20,6 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
         <li
             key={name}
             className={styles["web-project-item"]}
-            style={{
-                borderBottom: `10px solid var(--neon-${color})`,
-            }}
         >
             <img src={image} alt={name} />
             <div className={styles["web-project-details"]}>
@@ -43,6 +40,14 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
                 }
                 </div>
             </div>
+            <div
+                className={styles["web-project-neon-strip"]}
+                style={{
+                    backgroundColor: `var(--neon-${color})`,
+                    filter: `drop-shadow(var(--glow-single-${color}))`,
+                    
+                }}
+            ></div>
         </li>
     )
 }

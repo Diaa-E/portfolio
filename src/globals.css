@@ -57,6 +57,12 @@
     --backlight-gold: radial-gradient(closest-side, var(--neon-gold-off), var(--none));
     --backlight-green: radial-gradient(closest-side, var(--neon-green-off), var(--none));
 
+    --glow-single-pink: 0 0 5px var(--neon-pink);
+    --glow-single-yellow: 0 0 5px var(--neon-yellow);
+    --glow-single-blue: 0 0 5px var(--neon-blue);
+    --glow-single-gold: 0 0 5px var(--neon-gold);
+    --glow-single-green: 0 0 5px var(--neon-green);
+
     --glow-pink: 
         0 0 5px var(--neon-pink),
         0 0 10px var(--neon-pink-off),

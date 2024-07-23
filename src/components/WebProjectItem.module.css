@@ -8,6 +8,13 @@
     gap: 2rem;
 }
 
+.web-project-links{
+    display: flex;
+    margin: 2rem 0 0 0;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
 .web-project-description{
     color: var(--text);
     text-align: left;

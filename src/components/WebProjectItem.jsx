@@ -24,7 +24,7 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
                 borderBottom: `10px solid var(--neon-${color})`,
             }}
         >
-            <img src={image} alt="" />
+            <img src={image} alt={name} />
             <div className={styles["web-project-details"]}>
                 <h3
                     className={styles["web-project-title"]}

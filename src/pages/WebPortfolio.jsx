@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
 import githubIcon from "../assets/icons/github.svg"
-import SocialLinks from "../components/SocialLinks";
+import IconLink from "../components/IconLink";
 import { webProjects } from "../data/webProjects";
 import WebWorkItem from "../components/WebProjectItem";
 
@@ -27,8 +27,9 @@ export default function WebPortfolio({ }) {
                 ]}
             />
             <HeroWeb />
-            <SocialLinks
-                socialLinks={[
+            <ul className={styles["social-links-wrapper"]}>
+            {
+                [
                     {
                         name: "Github",
                         to: "https://github.com",
@@ -36,11 +37,14 @@ export default function WebPortfolio({ }) {
                     },
                     {
                         name: "Github",
-                        to: "https://github.com",
+                        to: "https://githubdf.com",
                         icon: githubIcon
                     }
-                ]}
-            />
+                ].map(link => {
+                    return <IconLink key={link.to} icon={link.icon} name={link.name} to={link.to} />
+                })
+            }
+            </ul>
             <p className={styles["bio"]}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Labore molestiae blanditiis saepe impedit, ut soluta doloremque
@@ -58,6 +62,7 @@ export default function WebPortfolio({ }) {
                 webProjects.map(project => {
                     return (
                         <WebWorkItem
+                            key={project.name}
                             name={project.name}
                             livePreview={project.livePreview}
                             source={project.source}

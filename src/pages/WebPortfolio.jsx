@@ -42,7 +42,7 @@ export default function WebPortfolio({ }) {
                     }
                 ].map(link => {
                     return <li key={link.to}>
-                        <IconLink icon={link.icon} name={link.name} to={link.to} />
+                        <IconLink icon={link.icon} name={link.name} to={link.to} textOnRight={true} />
                     </li>
                 })
             }

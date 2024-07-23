@@ -33,11 +33,11 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
                 <div className={styles["web-project-links"]}>
                 {
                     source &&
-                    <IconLink to={source} name={"Source"} icon={codeIcon} />
+                    <IconLink to={source} name={"Source"} icon={codeIcon} textOnRight={true} />
                 }
                 {
                     livePreview &&
-                    <IconLink to={livePreview} name={"Live"} icon={previewIcon} />
+                    <IconLink to={livePreview} name={"Live"} icon={previewIcon} textOnRight={false}/>
                 }
                 </div>
             </div>

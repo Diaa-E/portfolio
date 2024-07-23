@@ -1,15 +1,24 @@
 .web-project-item{
+    background-color: var(--background-bright);
     display: flex;
-    flex-direction: row;
-    background-size: cover;
-    background-position: center;
+    flex-direction: column;
     justify-items: center;
     justify-content: space-between;
-    overflow: clip;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.web-project-description{
+    color: var(--text);
+    text-align: left;
+}
+
+.web-project-details{
+    display: flex;
+    flex-direction: column;
 }
 
 .web-project-title{
-    padding: 2rem 0 2rem 0;
     color: var(--text);
     font-family: var(--font-default);
     font-size: 1.5rem;

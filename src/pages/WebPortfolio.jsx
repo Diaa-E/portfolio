@@ -61,6 +61,8 @@ export default function WebPortfolio({ }) {
                             name={project.name}
                             livePreview={project.livePreview}
                             source={project.source}
+                            image={project.image}
+                            description={project.description}
                         />
                     )
                 })

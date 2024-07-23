@@ -30,8 +30,9 @@
 
 :root{
     --background: #1a1a1a;
+    --background-bright: #262626;
     --background-trans: #1a1a1abf;
-    --none: rgba(0, 0, 0, 0);
+    --none: #00000000;
     --text: #f2f2f2;
     --graffiti-magenta: #ae45ff;
     --graffiti-green: #b2ff58;

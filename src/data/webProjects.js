@@ -70,6 +70,6 @@ export const webProjects = [
         livePreview: "https://bookshelf-beige-zeta.vercel.app/",
         source: "https://github.com/Diaa-E/bookshelf",
         image: bookshelfImage,
-        description: "Keep track of read and unread books in your library."
+        description: "An app for keeping track of book titles in a library"
     }
 ]

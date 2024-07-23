@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
-    justify-content: space-between;
     padding: 1rem;
     gap: 2rem;
 }
@@ -23,6 +22,8 @@
 .web-project-details{
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 }
 
 .web-project-title{

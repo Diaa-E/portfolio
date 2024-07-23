@@ -26,10 +26,12 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
         >
             <img src={image} alt={name} />
             <div className={styles["web-project-details"]}>
-                <h3
-                    className={styles["web-project-title"]}
-                >{name}</h3>
-                <p className={styles["web-project-description"]}>{description}</p>
+                <span>
+                    <h3
+                        className={styles["web-project-title"]}
+                    >{name}</h3>
+                    <p className={styles["web-project-description"]}>{description}</p>
+                </span>
                 <div className={styles["web-project-links"]}>
                 {
                     source &&

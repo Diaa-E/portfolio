@@ -41,7 +41,9 @@ export default function WebPortfolio({ }) {
                         icon: githubIcon
                     }
                 ].map(link => {
-                    return <IconLink key={link.to} icon={link.icon} name={link.name} to={link.to} />
+                    return <li key={link.to}>
+                        <IconLink icon={link.icon} name={link.name} to={link.to} />
+                    </li>
                 })
             }
             </ul>

@@ -2,10 +2,10 @@ import HeroWeb from "../components/HeroWeb";
 import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
-import githubIcon from "../assets/icons/github.svg"
 import IconLink from "../components/IconLink";
 import { webProjects } from "../data/webProjects";
 import WebWorkItem from "../components/WebProjectItem";
+import { socialLinks } from "../data/socialLinks";
 
 export default function WebPortfolio({ }) {
     return (
@@ -29,18 +29,7 @@ export default function WebPortfolio({ }) {
             <HeroWeb />
             <ul className={styles["social-links-wrapper"]}>
             {
-                [
-                    {
-                        name: "Github",
-                        to: "https://github.com",
-                        icon: githubIcon
-                    },
-                    {
-                        name: "Github",
-                        to: "https://githubdf.com",
-                        icon: githubIcon
-                    }
-                ].map(link => {
+                socialLinks.web.map(link => {
                     return <li key={link.to}>
                         <IconLink icon={link.icon} name={link.name} to={link.to} textOnRight={true} />
                     </li>

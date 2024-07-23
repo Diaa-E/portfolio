@@ -103,4 +103,6 @@
     --font-graffiti-1: "digitag", sans-serif;
     --font-graffiti-2: "angstRidden", sans-serif;
     --font-default: "kanit", sans-serif;
+
+    scroll-behavior: smooth !important;
 }

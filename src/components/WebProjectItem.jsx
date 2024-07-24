@@ -11,7 +11,10 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
         "green",
         "yellow",
         "gold",
-        "blue"
+        "blue",
+        "red",
+        "purple",
+        "cyan"
     ];
 
     const [color] = useState(colors[Math.floor(Math.random() * colors.length)]);

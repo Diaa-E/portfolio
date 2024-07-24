@@ -14,62 +14,71 @@ export const webProjects = [
         livePreview: "https://diaa-e.github.io/easy-cv-builder/",
         source: "https://github.com/Diaa-E/easy-cv-builder",
         image: easyCvBuilderImage,
-        description: "An easy to use tool for building a CV."
+        description: "An easy to use tool for building a CV.",
+        tenRating: 10,
     },
     {
         name: "Battleship Classic",
         livePreview: "https://diaa-e.github.io/battleship-classic/",
         source: "https://github.com/Diaa-E/battleship-classic",
         image: battleshipClassicImage,
-        description: "Battleship board game - Human vs. Machine"
+        description: "Battleship board game - Human vs. Machine",
+        tenRating: 7,
     },
     {
         name: "Memory Card",
         livePreview: "https://diaa-e.github.io/memory-card/",
         source: "https://github.com/Diaa-E/memory-card",
         image: memoryCardImage,
-        description: "A simple memory game using playing cards."
+        description: "A simple memory game using playing cards.",
+        tenRating: 8,
     },
     {
         name: "3D Model Data Sheet Generator",
         livePreview: "https://diaa-e.github.io/3d-model-data-sheet-generator/",
         source: "https://github.com/Diaa-E/3d-model-data-sheet-generator",
         image: threedModelDataSheetGeneratorImage,
-        description: "A tool for generating 3D model description for different marketplaces."
+        description: "A tool for generating 3D model description for different marketplaces.",
+        tenRating: 5,
     },
     {
         name: "Knight's Travails",
         livePreview: "https://diaa-e.github.io/knights-travails/",
         source: "https://github.com/Diaa-E/knights-travails",
         image: knightsTravailsImage,
-        description: "The knight takes the shortest path to any selected square on the chess board."
+        description: "The knight takes the shortest path to any selected square on the chess board.",
+        tenRating: 7,
     },
     {
         name: "Weather App",
         livePreview: "https://diaa-e.github.io/weather-app/",
         source: "https://github.com/Diaa-E/weather-app",
         image: weatherAppImage,
-        description: "A weather app that changes the background image besed on the searched city."
+        description: "A weather app that changes the background image besed on the searched city.",
+        tenRating: 5,
     },
     {
         name: "Stopwatch",
         livePreview: "https://diaa-e.github.io/stopwatch/",
         source: "https://github.com/Diaa-E/stopwatch",
         image: stopwatchImage,
-        description: "An animated stopwatch and timer."
+        description: "An animated stopwatch and timer.",
+        tenRating: 7,
     },
     {
         name: "Shopping Cart",
         livePreview: "https://shopping-cart-delta-cyan.vercel.app/",
         source: "https://github.com/Diaa-E/shopping-cart",
         image: shoppingCartImage,
-        description: "A simple E-commerce site with a functional shopping cart."
+        description: "A simple E-commerce site with a functional shopping cart.",
+        tenRating: 8,
     },
     {
         name: "Bookshelf",
         livePreview: "https://bookshelf-beige-zeta.vercel.app/",
         source: "https://github.com/Diaa-E/bookshelf",
         image: bookshelfImage,
-        description: "An app for keeping track of book titles in a library"
+        description: "An app for keeping track of book titles in a library",
+        tenRating: 5,
     }
-]
+].sort((a, b) => b.tenRating - a.tenRating);

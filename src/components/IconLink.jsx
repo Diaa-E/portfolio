@@ -1,9 +1,15 @@
 import styles from "./IconLink.module.css";
 
-export default function IconLink({ to, icon, name, textOnRight = true})
+export default function IconLink({ to, icon, name, color = "blue", textOnRight = true})
 {
     return (
-        <a href={to} className={styles["social-link"]}>
+        <a
+            href={to} className={styles["social-link"]}
+            style={{
+                "--glow": `var(--glow-single-${color})`,
+                "--filter": `var(--filter-neon-${color})`,
+            }}
+        >
             {
                 textOnRight &&
                 <>

@@ -18,11 +18,11 @@
 }
 
 .social-link:hover{
-    filter: var(--filter-neon-blue);
+    filter: var(--filter);
 }
 
 .social-link:hover .social-link-icon{
-    filter: drop-shadow(var(--glow-single-blue));
+    filter: drop-shadow(var(--glow));
 }
 
 .social-link-icon{

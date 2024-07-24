@@ -26,6 +26,10 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
                 <span>
                     <h3
                         className={styles["web-project-title"]}
+                        style={{
+                            color: `var(--neon-${color})`,
+                            filter: `drop-shadow(var(--glow-single-${color}))`
+                        }}
                     >{name}</h3>
                     <p className={styles["web-project-description"]}>{description}</p>
                 </span>

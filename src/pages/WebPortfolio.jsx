@@ -31,7 +31,7 @@ export default function WebPortfolio({ }) {
             {
                 socialLinks.web.map(link => {
                     return <li key={link.to}>
-                        <IconLink icon={link.icon} name={link.name} to={link.to} textOnRight={true} />
+                        <IconLink icon={link.icon} name={link.name} to={link.to} textOnRight={true} color={link.color} />
                     </li>
                 })
             }

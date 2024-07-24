@@ -5,7 +5,8 @@ export const socialLinks = {
         {
             name: "Github",
             to: "https://github.com/Diaa-E",
-            icon: githubIcon
+            icon: githubIcon,
+            color: "green"
         },
     ]
 }

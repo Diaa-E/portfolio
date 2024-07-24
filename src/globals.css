@@ -46,7 +46,14 @@
     --neon-purple: #c7a2ff;
     --neon-cyan: #a2fff9;
 
+    --filter-neon-pink: brightness(0) invert(80%) sepia(12%) saturate(2071%) hue-rotate(282deg) brightness(102%) contrast(105%);
+    --filter-neon-yellow: brightness(0) invert(95%) sepia(91%) saturate(635%) hue-rotate(28deg) brightness(120%) contrast(99%);
     --filter-neon-blue: brightness(0) invert(75%) sepia(4%) saturate(4797%) hue-rotate(189deg) brightness(106%) contrast(100%);
+    --filter-neon-gold: brightness(0) invert(94%) sepia(31%) saturate(621%) hue-rotate(316deg) brightness(99%) contrast(103%);
+    --filter-neon-green: brightness(0) invert(95%) sepia(6%) saturate(2572%) hue-rotate(60deg) brightness(103%) contrast(104%);
+    --filter-neon-red: brightness(0) invert(86%) sepia(44%) saturate(2908%) hue-rotate(300deg) brightness(107%) contrast(116%);
+    --filter-neon-purple: brightness(0) invert(70%) sepia(28%) saturate(1206%) hue-rotate(208deg) brightness(98%) contrast(107%);
+    --filter-neon-cyan: brightness(0) invert(87%) sepia(36%) saturate(378%) hue-rotate(103deg) brightness(106%) contrast(104%);
 
     --neon-pink-off: #ff5bd696;
     --neon-yellow-off: #748e36;

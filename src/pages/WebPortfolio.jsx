@@ -21,22 +21,25 @@ export default function WebPortfolio({ }) {
         window.addEventListener("scroll", () => {
             
             // This needs to be in the same order as in the document from top to bottom
-            const refs = [
+            const sections = [
                 aboutRef.current,
                 workRef.current,
                 skillsRef.current,
             ];
 
+            //Section does not need to be at the very top to be highlighted
+            const sectionBuffer = window.innerHeight / 3;
+
             //soluition stolen from https://codepen.io/stepfray/pen/xxzJrYR
             //Similar concept to mine but much simpler
-            for (const ref of refs)
+            for (const section of sections)
             {
                 const scrolltDistance = scrollY;
-                const sectionTop = ref.offsetTop;
+                const sectionTop = section.offsetTop;
 
-                if(scrolltDistance >= sectionTop)
+                if(scrolltDistance >= sectionTop - sectionBuffer)
                 {
-                    setCurrentSection(ref.id);
+                    setCurrentSection(section.id);
                 }
             }
         });

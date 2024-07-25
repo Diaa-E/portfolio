@@ -23,6 +23,11 @@
     padding: 1.5rem;
 }
 
+.link-list a:hover, .link-list a:visited:hover{
+    color: var(--neon-blue);
+    filter: drop-shadow(var(--glow-single-blue))
+}
+
 a.active-section{
     border-bottom: solid 5px var(--neon-blue);
     color: var(--neon-blue) !important;

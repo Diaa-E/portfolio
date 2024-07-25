@@ -13,6 +13,7 @@
     flex-direction: row;
     gap: 30px;
     padding: 1.5rem;
+    margin-bottom: 5px;
 }
 
 .link-list a, .link-list a:visited{
@@ -20,4 +21,11 @@
     color: var(--text);
     font-size: 1rem;
     padding: 1.5rem;
+}
+
+a.active-section{
+    border-bottom: solid 5px var(--neon-blue);
+    color: var(--neon-blue) !important;
+    filter: drop-shadow(var(--glow-single-blue));
+    transition: 0.2s ease-in-out;
 }

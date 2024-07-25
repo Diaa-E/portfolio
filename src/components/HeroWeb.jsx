@@ -3,7 +3,7 @@ import styles from "./HeroWeb.module.css";
 export default function HeroWeb({ })
 {
     return (
-        <div id="about" className={styles["hero"]}>
+        <div className={styles["hero"]}>
             <h1 className={styles["title"]}>
                 <span className={styles["graffiti-one"]}>Hi, I'm</span>
                 <span className={styles["neon-one"]}>Diaa</span>

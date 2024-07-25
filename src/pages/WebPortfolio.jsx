@@ -18,32 +18,33 @@ export default function WebPortfolio({ }) {
 
     useEffect(() => {
 
-        const sectionObserver = new IntersectionObserver(
-            (entries) => {
+        window.addEventListener("scroll", () => {
+            
+            // This needs to be in the same order as in the document from top to bottom
+            const refs = [
+                aboutRef.current,
+                workRef.current,
+                skillsRef.current,
+            ]
 
-                for (const entry of entries)
-                {
-                    if (entry.target.id !== currentSection && entry.isIntersecting)
-                    {
-                        setCurrentSection(entry.target.id);
-                        return;
-                    }
-                }
-            },
+            let closest
+
+            for (const ref of refs)
             {
-                root: null,
-                threshold: 0,
+                if (ref.getBoundingClientRect().top > 0)
+                {
+                    setCurrentSection(closest);
+                    return;
+                }
+                else
+                {
+                    closest = ref.id;
+                }
             }
-        );
+        });
 
-        [
-            aboutRef,
-            workRef,
-            skillsRef,
-        ].forEach(entry => sectionObserver.observe(entry.current));
+        return () => window.removeEventListener("scroll", window);
 
-        return () => sectionObserver.disconnect();
-        
     }, []);
 
     return (

@@ -25,20 +25,18 @@ export default function WebPortfolio({ }) {
                 aboutRef.current,
                 workRef.current,
                 skillsRef.current,
-            ]
+            ];
 
-            let closest
-
+            //soluition stolen from https://codepen.io/stepfray/pen/xxzJrYR
+            //Similar concept to mine but much simpler
             for (const ref of refs)
             {
-                if (ref.getBoundingClientRect().top > 0)
+                const scrolltDistance = scrollY;
+                const sectionTop = ref.offsetTop;
+
+                if(scrolltDistance >= sectionTop)
                 {
-                    setCurrentSection(closest);
-                    return;
-                }
-                else
-                {
-                    closest = ref.id;
+                    setCurrentSection(ref.id);
                 }
             }
         });

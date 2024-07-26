@@ -4,7 +4,7 @@ import styles from "./WebPortfolio.module.css";
 
 import IconLink from "../components/IconLink";
 import { webProjects } from "../data/webProjects";
-import WebWorkItem from "../components/WebProjectItem";
+import WebProjectItem from "../components/WebProjectItem";
 import { socialLinks } from "../data/socialLinks";
 import { useEffect, useRef, useState } from "react";
 
@@ -97,7 +97,7 @@ export default function WebPortfolio({ }) {
                 {
                     webProjects.map(project => {
                         return (
-                            <WebWorkItem
+                            <WebProjectItem
                                 key={project.name}
                                 name={project.name}
                                 livePreview={project.livePreview}

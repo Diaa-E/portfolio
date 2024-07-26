@@ -4,7 +4,7 @@ import codeIcon from "../assets/icons/code.svg";
 import previewIcon from "../assets/icons/preview.svg";
 import IconLink from "./IconLink";
 
-export default function WebWorkItem({name, livePreview, source, image, description})
+export default function WebProjectItem({name, livePreview, source, image, description})
 {
     const colors = [
         "pink",
@@ -52,7 +52,6 @@ export default function WebWorkItem({name, livePreview, source, image, descripti
                 style={{
                     backgroundColor: `var(--neon-${color})`,
                     filter: `drop-shadow(var(--glow-single-${color}))`,
-                    
                 }}
             ></div>
         </li>

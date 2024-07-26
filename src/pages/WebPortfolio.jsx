@@ -2,9 +2,8 @@ import AboutWeb from "../components/AboutWeb";
 import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
-import { webProjects } from "../data/webProjects";
-import WebProjectItem from "../components/WebProjectItem";
 import { useEffect, useRef, useState } from "react";
+import WebWork from "../components/WebWork";
 
 export default function WebPortfolio({ }) {
 
@@ -71,28 +70,7 @@ export default function WebPortfolio({ }) {
             </section>
 
             <section ref={workRef} id="work">
-                <div className={styles["work-header"]}>
-                    <h2 className={styles["work-title"]}>
-                        <span>My</span>
-                        <span>Work</span>
-                    </h2>
-                </div>
-                <ul className={styles["projects-list"]}>
-                {
-                    webProjects.map(project => {
-                        return (
-                            <WebProjectItem
-                                key={project.name}
-                                name={project.name}
-                                livePreview={project.livePreview}
-                                source={project.source}
-                                image={project.image}
-                                description={project.description}
-                            />
-                        )
-                    })
-                }
-                </ul>
+                <WebWork />
             </section>
 
             <section ref={skillsRef} id="skills">

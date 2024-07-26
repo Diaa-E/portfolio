@@ -1,0 +1,27 @@
+.skills-header{
+    composes: bricks-background from "../common.module.css";
+    composes: section-header from "../common.module.css";
+    composes: parallax from "../common.module.css";
+    background-image: url("../assets/images/bricks_background.webp");
+}
+
+.skills-title{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.skills-title>span:first-child{
+    font-family: var(--font-graffiti-1);
+    color: var(--graffiti-magenta);
+    font-size: 4rem;
+    transform: translateY(-30px);
+}
+
+.skills-title>span:last-child{
+    font-family: var(--font-neon-2);
+    font-size: 5rem;
+    color: var(--neon-green);
+    text-shadow: var(--glow-green);
+    background-image: var(--backlight-green);
+}

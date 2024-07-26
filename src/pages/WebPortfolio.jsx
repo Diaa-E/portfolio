@@ -4,6 +4,7 @@ import styles from "./WebPortfolio.module.css";
 
 import { useEffect, useRef, useState } from "react";
 import WebWork from "../components/WebWork";
+import WebSkills from "../components/WebSkills";
 
 export default function WebPortfolio({ }) {
 
@@ -74,12 +75,7 @@ export default function WebPortfolio({ }) {
             </section>
 
             <section ref={skillsRef} id="skills">
-                <div className={styles["skills-header"]}>
-                    <h2 className={styles["skills-title"]}>
-                        <span>My</span>
-                        <span>Skills</span>
-                    </h2>
-                </div>
+                <WebSkills />
             </section>
         </>
     )

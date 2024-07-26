@@ -1,11 +1,9 @@
-import HeroWeb from "../components/HeroWeb";
+import AboutWeb from "../components/AboutWeb";
 import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
-import IconLink from "../components/IconLink";
 import { webProjects } from "../data/webProjects";
 import WebProjectItem from "../components/WebProjectItem";
-import { socialLinks } from "../data/socialLinks";
 import { useEffect, useRef, useState } from "react";
 
 export default function WebPortfolio({ }) {
@@ -67,23 +65,9 @@ export default function WebPortfolio({ }) {
                 ]}
                 activeAnchor={currentSection}
             />
+
             <section ref={aboutRef} id="about">
-                <HeroWeb />
-                <ul className={styles["social-links-wrapper"]}>
-                {
-                    socialLinks.web.map(link => {
-                        return <li key={link.to}>
-                            <IconLink icon={link.icon} name={link.name} to={link.to} textOnRight={true} color={link.color} />
-                        </li>
-                    })
-                }
-                </ul>
-                <p className={styles["bio"]}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Labore molestiae blanditiis saepe impedit, ut soluta doloremque
-                    ipsam excepturi voluptas, autem obcaecati veniam consectetur.
-                    Natus nobis libero debitis commodi voluptatum temporibus.
-                </p>
+                <AboutWeb />
             </section>
 
             <section ref={workRef} id="work">

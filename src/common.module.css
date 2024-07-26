@@ -21,6 +21,5 @@
     font-family: var(--font-default);
     color: var(--text);
     font-size: 1.5rem;
-    margin: 3rem auto 0 auto;
     max-width: 700px;
 }

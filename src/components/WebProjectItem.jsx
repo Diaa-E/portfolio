@@ -3,21 +3,12 @@ import styles from "./WebProjectItem.module.css";
 import codeIcon from "../assets/icons/code.svg";
 import previewIcon from "../assets/icons/preview.svg";
 import IconLink from "./IconLink";
+import generateRandomNeonColor from "../utils/neonColorGenerator";
 
 export default function WebProjectItem({name, livePreview, source, image, description})
 {
-    const colors = [
-        "pink",
-        "green",
-        "yellow",
-        "gold",
-        "blue",
-        "red",
-        "purple",
-        "cyan"
-    ];
 
-    const [color] = useState(colors[Math.floor(Math.random() * colors.length)]);
+    const [color] = useState(generateRandomNeonColor());
 
     return (
         <li

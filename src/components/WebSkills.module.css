@@ -31,7 +31,7 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
-    transition: .2s;
+    transition: transform .2s;
     min-height: 150px;
 }
 
@@ -41,7 +41,26 @@
     background-repeat: no-repeat;
     height: 75px;
     width: 75px;
-    transition: .5s;
+    transition: transform .5s, filter 0s;
+    padding: 0;
+    cursor: pointer;
+    background-color: var(--none);
+    border: none;
+}
+
+.skill-button:focus{
+    outline: none;
+}
+
+.skill-button:hover{
+    border: none;
+}
+
+.skill-button>img{
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: inherit;
+    filter: var(--off);
 }
 
 .skills-list{
@@ -51,6 +70,6 @@
 }
 
 .active{
+    filter: var(--filter);
     transform: scale(150%);
-    transition: .5s;
 }

@@ -30,9 +30,14 @@ export default function WebSkills({ })
                         return <li key={skill.name}>
                             <button
                                 className={[styles["skill-button"], webSkills[active].name === skill.name? styles["active"] : ""].join(" ")}
-                                style={{backgroundImage: `url(${skill.icon})`}}
+                                style={{
+                                    "--off": `var(--filter-neon-${skill.color}-off)`,
+                                    "--filter": `var(--filter-neon-${skill.color}) drop-shadow(var(--glow-single-${skill.color}))`
+                                }}
                                 onClick={() => setActive(getSkillIndex(webSkills, skill.name))}
-                            ></button>
+                            >
+                                <img src={skill.icon} alt="" />
+                            </button>
                         </li>
                     })
                 }

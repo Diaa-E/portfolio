@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="front_end.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.97125"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <path
+     d="M22 15C22 18.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22"
+     stroke="#1C274C"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     id="path1"
+     style="stroke:#f2f2f2;stroke-opacity:1" />
+  <path
+     d="M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2 4.34315 2 5.22876 2 9"
+     stroke="#1C274C"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     id="path2"
+     style="stroke:#f2f2f2;stroke-opacity:1" />
+  <path
+     d="M12 7C9.07268 7 7.08037 8.56222 5.89242 9.94021C5.29747 10.6303 5 10.9754 5 12C5 13.0246 5.29748 13.3697 5.89243 14.0598C7.08038 15.4378 9.07268 17 12 17C14.9273 17 16.9196 15.4378 18.1076 14.0598C18.7025 13.3697 19 13.0246 19 12C19 10.9754 18.7025 10.6303 18.1076 9.94021C17.5723 9.31933 16.8738 8.66106 16 8.12513"
+     stroke="#1C274C"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     id="path3"
+     style="stroke:#f2f2f2;stroke-opacity:1" />
+  <circle
+     cx="12"
+     cy="12"
+     r="2"
+     stroke="#1C274C"
+     stroke-width="1.5"
+     id="circle3"
+     style="stroke:#f2f2f2;stroke-opacity:1" />
+  <path
+     d="M10 22C9.65081 22 9.31779 22 9 21.9991M2 15C2 18.7712 2 19.6569 3.17157 20.8284C3.82475 21.4816 4.69989 21.7706 6 21.8985"
+     stroke="#1C274C"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     id="path4"
+     style="stroke:#f2f2f2;stroke-opacity:1" />
+  <path
+     d="M14 2C14.3492 2 14.6822 2 15 2.00093M22 9C22 5.22876 22 4.34315 20.8284 3.17157C20.1752 2.51839 19.3001 2.22937 18 2.10149"
+     stroke="#1C274C"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     id="path5"
+     style="stroke:#f2f2f2;stroke-opacity:1" />
+</svg>

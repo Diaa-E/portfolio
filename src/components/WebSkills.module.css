@@ -25,3 +25,32 @@
     text-shadow: var(--glow-green);
     background-image: var(--backlight-green);
 }
+
+.skills-carousel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    transition: .2s;
+    min-height: 150px;
+}
+
+.skill-button{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 75px;
+    transition: .5s;
+}
+
+.skills-list{
+    width: calc(60px + 225px);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.active{
+    transform: scale(150%);
+    transition: .5s;
+}

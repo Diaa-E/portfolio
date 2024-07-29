@@ -1,0 +1,29 @@
+.tools-wrapper{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    gap: 1rem;
+    margin: 1rem 0 10rem 0;
+}
+
+.tools-list{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tool-name{
+    color: var(--text);
+    font-family: var(--font-default);
+    background-color: var(--background-bright);
+    padding: 5px;
+}
+
+.skill-name{
+    color: green;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}

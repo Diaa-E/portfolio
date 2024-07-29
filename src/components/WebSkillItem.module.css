@@ -23,7 +23,8 @@
 }
 
 .skill-name{
-    color: green;
+    color: var(--color);
+    filter: drop-shadow(var(--glow));
     font-size: 1.5rem;
     margin: 1rem 0;
 }

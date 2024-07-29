@@ -7,7 +7,7 @@ import generateRandomNeonColor from "../utils/neonColorGenerator";
 
 export const webSkills = [
     {
-        name: "Front-End Web Development",
+        name: "Front-End",
         icon: frontEndIcon,
         color: generateRandomNeonColor(),
         tools: [

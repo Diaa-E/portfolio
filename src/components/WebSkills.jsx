@@ -6,6 +6,7 @@ import styles from "./WebSkills.module.css";
 export default function WebSkills({ })
 {
     const [active, setActive] = useState(0);
+    const [activeColor, setActiveColor] = useState(webSkills[active].color)
 
     function getSkillIndex(skillsList, skillName)
     {
@@ -34,7 +35,10 @@ export default function WebSkills({ })
                                     "--off": `var(--filter-neon-${skill.color}-off)`,
                                     "--filter": `var(--filter-neon-${skill.color}) drop-shadow(var(--glow-single-${skill.color}))`
                                 }}
-                                onClick={() => setActive(getSkillIndex(webSkills, skill.name))}
+                                onClick={() => {
+                                    setActive(getSkillIndex(webSkills, skill.name));
+                                    setActiveColor(skill.color)
+                                }}
                             >
                                 <img src={skill.icon} alt="" />
                             </button>
@@ -43,7 +47,7 @@ export default function WebSkills({ })
                 }
                 </ul>
             </div>
-            <WebSkillItem name={webSkills[active].name} tools={webSkills[active].tools} />
+            <WebSkillItem color={activeColor} name={webSkills[active].name} tools={webSkills[active].tools} />
         </>
     )
 }

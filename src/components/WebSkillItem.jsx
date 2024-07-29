@@ -14,7 +14,10 @@ export default function WebSkillItem({ name, color, tools = [] })
             <ul className={styles["tools-list"]}>
             {
                 tools.map(tool => {
-                    return <li className={styles["tool-name"]} key={tool}>{tool}</li>
+                    return <li className={styles["tool-name"]} key={tool}>
+                        <div className={styles["neon-strip"]}></div>
+                        <span>{tool}</span>
+                    </li>
                 })
             }
             </ul>

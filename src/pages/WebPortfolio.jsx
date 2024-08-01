@@ -28,7 +28,7 @@ export default function WebPortfolio({ }) {
             //Section does not need to be at the very top to be highlighted
             const sectionBuffer = window.innerHeight / 3;
 
-            //soluition stolen from https://codepen.io/stepfray/pen/xxzJrYR
+            //solution stolen from https://codepen.io/stepfray/pen/xxzJrYR
             //Similar concept to mine but much simpler
             for (const section of sections)
             {

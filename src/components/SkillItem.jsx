@@ -1,4 +1,5 @@
 import styles from "./SkillItem.module.css";
+import PropTypes from "prop-types";
 
 export default function SkillItem({ name, color, tools = [] })
 {
@@ -23,4 +24,10 @@ export default function SkillItem({ name, color, tools = [] })
             </ul>
         </div>
     )
+}
+
+SkillItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    tools: PropTypes.arrayOf(PropTypes.string).isRequired
 }

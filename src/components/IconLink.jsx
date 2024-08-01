@@ -1,4 +1,5 @@
 import styles from "./IconLink.module.css";
+import PropTypes from "prop-types";
 
 export default function IconLink({ to, icon, name, color = "blue", textOnRight = true})
 {
@@ -48,4 +49,12 @@ export default function IconLink({ to, icon, name, color = "blue", textOnRight =
             }
         </a>
     )
+}
+
+IconLink.propTypes = {
+    to: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    color: PropTypes.string,
+    textOnRight: PropTypes.bool,
 }

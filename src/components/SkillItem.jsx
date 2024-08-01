@@ -1,6 +1,6 @@
-import styles from "./WebSkillItem.module.css";
+import styles from "./SkillItem.module.css";
 
-export default function WebSkillItem({ name, color, tools = [] })
+export default function SkillItem({ name, color, tools = [] })
 {
     return (
         <div

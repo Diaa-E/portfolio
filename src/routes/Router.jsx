@@ -4,7 +4,7 @@ import WebPortfolio from "../pages/WebPortfolio";
 import ArtPortfolio from "../pages/ArtPortfolio";
 import Error from "../pages/Error";
 
-export default function Router({ })
+export default function Router()
 {
     const router = createBrowserRouter([
         {

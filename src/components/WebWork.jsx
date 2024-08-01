@@ -3,7 +3,7 @@ import styles from "./WebWork.module.css";
 import { webProjects } from "../data/webProjects";
 import WebProjectItem from "./WebProjectItem";
 
-export default function WebWork({ })
+export default function WebWork()
 {
     return (
         <>

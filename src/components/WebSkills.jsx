@@ -2,7 +2,7 @@ import { webSkills } from "../data/webSkills";
 import styles from "./WebSkills.module.css";
 import SkillsCarousel from "./SkillsCarousel";
 
-export default function WebSkills({ })
+export default function WebSkills()
 {
     return (
         <>

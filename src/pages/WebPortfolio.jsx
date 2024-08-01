@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import WebWork from "../components/WebWork";
 import WebSkills from "../components/WebSkills";
 
-export default function WebPortfolio({ }) {
+export default function WebPortfolio() {
 
     const [currentSection, setCurrentSection] = useState();
 

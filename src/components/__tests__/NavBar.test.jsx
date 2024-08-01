@@ -13,7 +13,13 @@ describe("NavBar Component", () => {
 
     it("Renders a link to home page", () => {
 
-        setup(<NavBar />);
+        const scrollAnchors = [
+            { 
+                to: "#one", text: "anchor one" 
+            },
+        ];
+
+        setup(<NavBar scrollAnchors={scrollAnchors} activeAnchor={"one"} />);
 
         expect(screen.queryByRole("link", { name: /home/i })).toBeInTheDocument();
     });
@@ -25,9 +31,25 @@ describe("NavBar Component", () => {
                 to: "#one", text: "anchor one" 
             },
         ];
-        setup(<NavBar scrollAnchors={scrollAnchors} />);
+        setup(<NavBar scrollAnchors={scrollAnchors} activeAnchor={"one"} />);
 
         expect(screen.queryByRole("link", { name: scrollAnchors[0].text})).toBeInTheDocument();
         expect(screen.queryByRole("link", { name: scrollAnchors[0].text}).href).toContain(scrollAnchors[0].to);
+    });
+
+    it("Marks highlights active section based on active anchor prop", () => {
+
+        const scrollAnchors = [
+            { 
+                to: "#one", text: "anchor one" 
+            },
+            {
+                to: "#two", text: "anchor two"
+            }
+        ];
+
+        setup(<NavBar scrollAnchors={scrollAnchors} activeAnchor={"two"} />);
+
+        expect(screen.queryByRole("link", { name: scrollAnchors[1].text}).className).toContain("active")
     });
 });

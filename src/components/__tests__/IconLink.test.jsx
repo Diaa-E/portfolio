@@ -13,10 +13,10 @@ describe("SocialLinks Component", () => {
 
     it("Uses link icon from props", () => {
 
-        render(<IconLink to={"some/place"} name={"github"} icon={"path"} />);
+        const { container } = render(<IconLink to={"some/place"} name={"github"} icon={"path"} />);
 
-        expect(screen.queryByRole("img", { hidden: true })).toBeInTheDocument();
-        expect(screen.queryByRole("img", { hidden: true }).src).toContain("path");
+        expect(container.querySelector("div#icon")).toBeInTheDocument();
+        expect(window.getComputedStyle(container.querySelector("div#icon")).backgroundImage).toEqual("url(path)");
     });
 
     it("Uses URL from props", () => {

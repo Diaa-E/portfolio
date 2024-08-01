@@ -13,12 +13,14 @@ export default function IconLink({ to, icon, name, color = "blue", textOnRight =
             {
                 textOnRight &&
                 <>
-                    <img
+                    <div
+                        id="icon"
                         className={styles["social-link-icon"]}
-                        src={icon}
-                        alt={name}
-                        aria-hidden
-                        />
+                        style={{
+                            backgroundImage: `url(${icon})`
+                        }}
+                    >
+                    </div>
                     <span className={styles["link-text"]}>
                     {
                         name
@@ -34,12 +36,14 @@ export default function IconLink({ to, icon, name, color = "blue", textOnRight =
                     name
                 }
                 </span>
-                <img
-                    className={styles["social-link-icon"]}
-                    src={icon}
-                    alt={name}
-                    aria-hidden
-                />
+                <div
+                    id="icon"
+                        className={styles["social-link-icon"]}
+                        style={{
+                            backgroundImage: `url(${icon})`
+                        }}
+                    >
+                </div>
             </>
             }
         </a>

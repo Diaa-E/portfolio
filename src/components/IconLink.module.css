@@ -26,6 +26,8 @@
 }
 
 .social-link-icon{
+    background-position: center;
+    background-size: contain;
     cursor: pointer;
     height: 30px;
     width: 30px;

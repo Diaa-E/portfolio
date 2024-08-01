@@ -2,6 +2,7 @@ import styles from "./WebProjectItem.module.css";
 import codeIcon from "../assets/icons/code.svg";
 import previewIcon from "../assets/icons/preview.svg";
 import IconLink from "./IconLink";
+import PropTypes from "prop-types";
 
 export default function WebProjectItem({name, livePreview, source, image, description, color})
 {
@@ -42,4 +43,13 @@ export default function WebProjectItem({name, livePreview, source, image, descri
             ></div>
         </li>
     )
+}
+
+WebProjectItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    livePreview: PropTypes.string,
+    source: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
 }

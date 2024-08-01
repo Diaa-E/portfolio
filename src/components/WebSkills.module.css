@@ -46,6 +46,7 @@
     cursor: pointer;
     background-color: var(--none);
     border: none;
+    filter: var(--off);
 }
 
 .skill-button:focus{
@@ -54,13 +55,6 @@
 
 .skill-button:hover{
     border: none;
-}
-
-.skill-button>img{
-    user-select: none;
-    -webkit-user-drag: none;
-    cursor: inherit;
-    filter: var(--off);
 }
 
 .skills-list{

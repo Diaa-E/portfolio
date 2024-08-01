@@ -30,8 +30,10 @@ export default function WebSkills({ })
                     webSkills.map(skill => {
                         return <li key={skill.name}>
                             <button
+                                aria-label={skill.name}
                                 className={[styles["skill-button"], webSkills[active].name === skill.name? styles["active"] : ""].join(" ")}
                                 style={{
+                                    backgroundImage: `url(${skill.icon})`,
                                     "--off": `var(--filter-neon-${skill.color}-off)`,
                                     "--filter": `var(--filter-neon-${skill.color}) drop-shadow(var(--glow-single-${skill.color}))`
                                 }}
@@ -39,9 +41,7 @@ export default function WebSkills({ })
                                     setActive(getSkillIndex(webSkills, skill.name));
                                     setActiveColor(skill.color)
                                 }}
-                            >
-                                <img src={skill.icon} alt="" />
-                            </button>
+                            ></button>
                         </li>
                     })
                 }

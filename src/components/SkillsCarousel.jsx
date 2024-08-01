@@ -42,5 +42,10 @@ export default function SkillsCarousel({ skills = [] })
 }
 
 SkillsCarousel.propTypes = {
-    skills: PropTypes.arrayOf(PropTypes.object).isRequired
+    skills: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        color: PropTypes.string,
+        tools: PropTypes.arrayOf(PropTypes.string),
+        icon: PropTypes.string
+    })).isRequired
 }

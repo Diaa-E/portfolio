@@ -1,6 +1,7 @@
 import SkillItem from "./SkillItem";
 import { useState } from "react";
 import styles from "./SkillsCarousel.module.css";
+import PropTypes from "prop-types";
 
 export default function SkillsCarousel({ skills = [] })
 {
@@ -38,4 +39,8 @@ export default function SkillsCarousel({ skills = [] })
             <SkillItem color={activeColor} name={skills[active].name} tools={skills[active].tools} />
         </>
     )
+}
+
+SkillsCarousel.propTypes = {
+    skills: PropTypes.arrayOf(PropTypes.object).isRequired
 }

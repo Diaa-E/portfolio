@@ -1,5 +1,6 @@
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], activeAnchor })
 {
@@ -24,4 +25,9 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
             </ul>
         </nav>
     )
+}
+
+NavBar.propTypes = {
+    scrollAnchors: PropTypes.arrayOf(PropTypes.object),
+    activeAnchor: PropTypes.string,
 }

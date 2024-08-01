@@ -2,13 +2,13 @@ import styles from "./AboutWeb.module.css";
 import { socialLinks } from "../data/socialLinks";
 import IconLink from "./IconLink";
 
-export default function AboutWeb({ })
+export default function AboutWeb()
 {
     return (
         <>
             <div className={styles["hero"]}>
                 <h1 className={styles["title"]}>
-                    <span className={styles["graffiti-one"]}>Hi, I'm</span>
+                    <span className={styles["graffiti-one"]}>Hi, I&apos;m</span>
                     <span className={styles["neon-one"]}>Diaa</span>
                     <span className={styles["graffiti-two"]}>A</span>
                     <span className={styles["neon-two"]}>Front End <br /> Web Developer</span>

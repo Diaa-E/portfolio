@@ -6,28 +6,28 @@ describe("Web project item component", () => {
 
     it("Renders a title from the name prop", () => {
 
-        render(<WebProjectItem name={"project title"} />);
+        render(<WebProjectItem name={"project title"} color={"red"} description={"desc"} image={"path"} />);
 
         expect(screen.queryByRole("heading", { name: /project\stitle/i })).toBeInTheDocument();
     });
 
     it("Renders a description from the description prop", () => {
 
-        render(<WebProjectItem description={"project details"}/>);
+        render(<WebProjectItem name={"project title"} color={"red"} description={"project details"} image={"path"}/>);
 
         expect(screen.queryByText(/project\sdetails/i)).toBeInTheDocument();
     });
 
     it("Renders an image using the path from props", () => {
 
-        render(<WebProjectItem image={"path"} />);
+        render(<WebProjectItem name={"project title"} color={"red"} description={"desc"} image={"path"} />);
 
         expect(screen.queryByRole("img").src).toContain("path");
     });
 
     it("Renders a live preview link if a live preview link prop is provided", () => {
 
-        render(<WebProjectItem livePreview={"live"} />);
+        render(<WebProjectItem name={"project title"} color={"red"} description={"desc"} image={"path"} livePreview={"live"}/>);
 
         expect(screen.queryByRole("link", { name: /live/i })).toBeInTheDocument();
         expect(screen.queryByRole("link", { name: /live/i }).href).toContain("live");
@@ -35,14 +35,14 @@ describe("Web project item component", () => {
 
     it("Does not render a live preview link if no live preview link prop is provided", () => {
 
-        render(<WebProjectItem />);
+        render(<WebProjectItem name={"project title"} color={"red"} description={"desc"} image={"path"}/>);
 
         expect(screen.queryByRole("link")).not.toBeInTheDocument();
     });
 
     it("Renders a source link if a source link prop is provided", () => {
 
-        render(<WebProjectItem source={"source"} />);
+        render(<WebProjectItem name={"project title"} color={"red"} description={"desc"} image={"path"} source={"source"}/>);
 
         expect(screen.queryByRole("link", { name: /source/i })).toBeInTheDocument();
         expect(screen.queryByRole("link", { name: /source/i }).href).toContain("source");
@@ -50,7 +50,7 @@ describe("Web project item component", () => {
 
     it("Does not render a source link if no source link prop is provided", () => {
 
-        render(<WebProjectItem />);
+        render(<WebProjectItem name={"project title"} color={"red"} description={"desc"} image={"path"}  />);
 
         expect(screen.queryByRole("link")).not.toBeInTheDocument();
     });

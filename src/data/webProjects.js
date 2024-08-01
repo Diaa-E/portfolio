@@ -7,6 +7,7 @@ import weatherAppImage from "../assets/images/weather_app.webp";
 import stopwatchImage from "../assets/images/stopwatch.webp";
 import shoppingCartImage from "../assets/images/shopping_cart.webp";
 import bookshelfImage from "../assets/images/bookshelf.webp";
+import generateRandomNeonColor from "../utils/neonColorGenerator";
 
 export const webProjects = [
     {
@@ -16,6 +17,7 @@ export const webProjects = [
         image: easyCvBuilderImage,
         description: "An easy to use tool for building a CV.",
         tenRating: 10,
+        color: generateRandomNeonColor(),
     },
     {
         name: "Battleship Classic",
@@ -24,6 +26,7 @@ export const webProjects = [
         image: battleshipClassicImage,
         description: "Battleship board game - Human vs. Machine",
         tenRating: 7,
+        color: generateRandomNeonColor(),
     },
     {
         name: "Memory Card",
@@ -32,6 +35,7 @@ export const webProjects = [
         image: memoryCardImage,
         description: "A simple memory game using playing cards.",
         tenRating: 8,
+        color: generateRandomNeonColor(),
     },
     {
         name: "3D Model Data Sheet Generator",
@@ -40,6 +44,7 @@ export const webProjects = [
         image: threedModelDataSheetGeneratorImage,
         description: "A tool for generating 3D model description for different marketplaces.",
         tenRating: 5,
+        color: generateRandomNeonColor(),
     },
     {
         name: "Knight's Travails",
@@ -48,6 +53,7 @@ export const webProjects = [
         image: knightsTravailsImage,
         description: "The knight takes the shortest path to any selected square on the chess board.",
         tenRating: 7,
+        color: generateRandomNeonColor(),
     },
     {
         name: "Weather App",
@@ -56,6 +62,7 @@ export const webProjects = [
         image: weatherAppImage,
         description: "A weather app that changes the background image besed on the searched city.",
         tenRating: 5,
+        color: generateRandomNeonColor(),
     },
     {
         name: "Stopwatch",
@@ -64,6 +71,7 @@ export const webProjects = [
         image: stopwatchImage,
         description: "An animated stopwatch and timer.",
         tenRating: 7,
+        color: generateRandomNeonColor(),
     },
     {
         name: "Shopping Cart",
@@ -72,6 +80,7 @@ export const webProjects = [
         image: shoppingCartImage,
         description: "A simple E-commerce site with a functional shopping cart.",
         tenRating: 8,
+        color: generateRandomNeonColor(),
     },
     {
         name: "Bookshelf",
@@ -80,5 +89,6 @@ export const webProjects = [
         image: bookshelfImage,
         description: "An app for keeping track of book titles in a library",
         tenRating: 5,
+        color: generateRandomNeonColor(),
     }
 ].sort((a, b) => b.tenRating - a.tenRating);

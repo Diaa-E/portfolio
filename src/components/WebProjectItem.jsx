@@ -1,15 +1,10 @@
-import { useState } from "react";
 import styles from "./WebProjectItem.module.css";
 import codeIcon from "../assets/icons/code.svg";
 import previewIcon from "../assets/icons/preview.svg";
 import IconLink from "./IconLink";
-import generateRandomNeonColor from "../utils/neonColorGenerator";
 
-export default function WebProjectItem({name, livePreview, source, image, description})
+export default function WebProjectItem({name, livePreview, source, image, description, color})
 {
-
-    const [color] = useState(generateRandomNeonColor());
-
     return (
         <li
             key={name}

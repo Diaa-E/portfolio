@@ -24,6 +24,7 @@ export default function WebWork({ })
                             source={project.source}
                             image={project.image}
                             description={project.description}
+                            color={project.color}
                         />
                     )
                 })

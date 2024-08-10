@@ -12,7 +12,7 @@ export default function useIntersectionObserver(refsArray, intersectionCallback,
             return () => {};
         }
 
-        const observer = new IntersectionObserver(entries => intersectionCallback(entries), { rootMargin: "50%" });
+        const observer = new IntersectionObserver(entries => intersectionCallback(entries), { threshold: 0.5 });
 
         refsArray.forEach(ref => observer.observe(ref.current));
 

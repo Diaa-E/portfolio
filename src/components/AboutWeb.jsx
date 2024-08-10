@@ -9,9 +9,9 @@ export default function AboutWeb()
             <div className={styles["hero"]}>
                 <h1 className={styles["title"]}>
                     <span className={styles["graffiti-one"]}>Hi, I&apos;m</span>
-                    <span className={styles["neon-one"]}>Diaa</span>
+                    <span className={[styles["neon-one"], styles["neon-one-active"]].join(" ")}>Diaa</span>
                     <span className={styles["graffiti-two"]}>A</span>
-                    <span className={styles["neon-two"]}>Front End <br /> Web Developer</span>
+                    <span className={[styles["neon-two"], styles["neon-two-active"]].join(" ")}>Front End <br /> Web Developer</span>
                 </h1>
             </div>
             <ul className={styles["social-links-wrapper"]}>

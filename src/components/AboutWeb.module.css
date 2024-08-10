@@ -30,19 +30,59 @@
 
 .neon-one{
     font-family: var(--font-neon-1);
-    color: var(--neon-blue);
-    background-image: var(--backlight-blue);
-    text-shadow: var(--glow-blue);
+    color: var(--neon-blue-off);
     font-size: 5rem;
     margin-left: -100px;
+}
+
+.neon-one-active{
+    animation-name: flicker-1;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-delay: .7s;
+}
+
+.neon-two-active{
+    animation-name: flicker-2;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    animation-delay: .5s;
+}
+
+@keyframes flicker-1 {
+    from {
+        color: var(--neon-blue-off);
+        background-image: none;
+        text-shadow: none;
+    }
+    to {
+        color: var(--neon-blue);
+        background-image: var(--backlight-blue);
+        text-shadow: var(--glow-blue);
+    }
+}
+
+@keyframes flicker-2 {
+    from {
+        color: var(--neon-gold-off);
+        background-image: none;
+        text-shadow: none;
+    }
+    to {
+        color: var(--neon-gold);
+        background-image: var(--backlight-gold);
+        text-shadow: var(--glow-gold);
+    }
 }
 
 .neon-two{
     text-align: center;
     font-family: var(--font-neon-2);
-    color: var(--neon-gold);
-    background-image: var(--backlight-gold);
-    text-shadow: var(--glow-gold);
+    color: var(--neon-gold-off);
     font-size: 5rem;
 }
 

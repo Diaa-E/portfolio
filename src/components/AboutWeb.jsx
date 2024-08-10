@@ -63,7 +63,7 @@ export default function AboutWeb()
                     <span className={styles["graffiti-one"]}>Hi, I&apos;m</span>
                     <span
                         ref={neon1Ref}
-                        className={[styles["neon-one"]].join(" ")}
+                        className={styles["neon-one"]}
                         style={{
                             "--off": "var(--neon-blue-off)",
                             "--on": `var(--neon-blue)`,
@@ -76,7 +76,7 @@ export default function AboutWeb()
                     <span className={styles["graffiti-two"]}>A</span>
                     <span
                         ref={neon2Ref}
-                        className={[styles["neon-two"]].join(" ")}
+                        className={styles["neon-two"]}
                         style={{
                             "--off": "var(--neon-gold-off)",
                             "--on": `var(--neon-gold)`,

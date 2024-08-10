@@ -11,12 +11,10 @@
     gap: 20px;
 }
 
-.contact-title>span:first-child{
+.neon-one{
     font-family: var(--font-neon-2);
-    color: var(--neon-blue);
-    text-shadow: var(--glow-blue);
-    background-image: var(--backlight-blue);
     font-size: 4rem;
+    color: var(--neon-blue-off);
 }
 
 .contact-title>span:last-child{
@@ -54,4 +52,26 @@
 
 .contact-item>span{
     padding: 5px;
+}
+
+.active{
+    animation-name: flicker;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: var(--count);
+    animation-delay: var(--delay);
+}
+
+@keyframes flicker {
+    from {
+        color: var(--off);
+        background-image: none;
+        text-shadow: none;
+    }
+    to {
+        color: var(--on);
+        background-image: var(--backlight);
+        text-shadow: var(--glow);
+    }
 }

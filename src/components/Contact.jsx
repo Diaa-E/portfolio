@@ -1,17 +1,33 @@
 import styles from "./Contact.module.css";
 import emailIcon from "../assets/icons/email.svg";
-import { generateRandomNeonColor } from "../utils/neonTextUtils";
-import { useState } from "react";
+import { generateNeonTextActivator, generateNeonTextInlineStyle, generateRandomNeonColor } from "../utils/neonTextUtils";
+import { useRef, useState } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 export default function Contact()
 {
+    const neon1Ref = useRef(null);
     const [color] = useState(generateRandomNeonColor());
+
+    useIntersectionObserver(
+        [
+            neon1Ref
+        ],
+        generateNeonTextActivator(styles["active"]),
+        () => {
+            neon1Ref.current.classList.add(styles["active"])
+        }
+    )
 
     return (
         <>
             <div className={styles["skills-header"]}>
                 <h2 className={styles["contact-title"]}>
-                    <span>Contact</span>
+                    <span
+                        className={styles["neon-one"]}
+                        style={generateNeonTextInlineStyle("blue", 0.5, 3)}
+                        ref={neon1Ref}
+                    >Contact</span>
                     <span> Me</span>
                 </h2>
             </div>

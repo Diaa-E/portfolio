@@ -7,7 +7,7 @@ import weatherAppImage from "../assets/images/weather_app.webp";
 import stopwatchImage from "../assets/images/stopwatch.webp";
 import shoppingCartImage from "../assets/images/shopping_cart.webp";
 import bookshelfImage from "../assets/images/bookshelf.webp";
-import generateRandomNeonColor from "../utils/neonColorGenerator";
+import { generateRandomNeonColor } from "../utils/neonTextUtils";
 
 export const webProjects = [
     {

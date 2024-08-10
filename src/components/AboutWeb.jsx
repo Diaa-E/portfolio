@@ -3,6 +3,7 @@ import { socialLinks } from "../data/socialLinks";
 import IconLink from "./IconLink";
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { generateNeonTextActivator } from "../utils/neonTextUtils";
 
 export default function AboutWeb()
 {
@@ -15,19 +16,7 @@ export default function AboutWeb()
             neon1Ref,
             neon2Ref
         ],
-        (entries) => {
-            entries.forEach(entry => {
-                    
-                if (entry.isIntersecting)
-                {
-                    entry.target.classList.add(styles["active"]);
-                }
-                else
-                {
-                    entry.target.classList.remove(styles["active"]);
-                }
-            });
-        },
+        generateNeonTextActivator(styles["active"]),
         () => {
             neon1Ref.current.classList.add(styles["active"]);
             neon2Ref.current.classList.add(styles["active"]);

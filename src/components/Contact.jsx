@@ -1,6 +1,6 @@
 import styles from "./Contact.module.css";
 import emailIcon from "../assets/icons/email.svg";
-import generateRandomNeonColor from "../utils/neonColorGenerator";
+import { generateRandomNeonColor } from "../utils/neonTextUtils";
 import { useState } from "react";
 
 export default function Contact()

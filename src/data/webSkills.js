@@ -3,7 +3,7 @@ import frontEndIcon from "../assets/icons/front_end.svg";
 import testingIcon from "../assets/icons/testing.svg";
 import graphicDesignIcon from "../assets/icons/graphic_design.svg";
 import uiDesignIcon from "../assets/icons/ui_design.svg";
-import generateRandomNeonColor from "../utils/neonColorGenerator";
+import { generateRandomNeonColor } from "../utils/neonTextUtils";
 
 export const webSkills = [
     {

@@ -1,0 +1,17 @@
+.web-footer{
+    composes: bricks-background from "../common.module.css";
+    composes: footer from "../common.module.css";
+    composes: parallax from "../common.module.css";
+    background-image: url("../assets/images/bricks_background.webp");
+}
+
+.copyright{
+    color: var(--neon-pink);
+    text-shadow: var(--glow-pink);
+    font-family: var(--font-neon-1);
+}
+
+.year{
+    font-family: var(--font-default);
+    color: var(--text);
+}

@@ -77,6 +77,13 @@ export default function WebPortfolio() {
             <section ref={skillsRef} id="skills">
                 <WebSkills />
             </section>
+
+            <footer className={styles["web-footer"]}>
+                <h3>
+                    <span className={styles["year"]}>©️ {new Date().getFullYear()}</span>
+                    <span className={styles["copyright"]}> Diaa E.</span>
+                </h3>
+            </footer>
         </>
     )
 }

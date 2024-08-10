@@ -4,7 +4,7 @@ import { webProjects } from "../data/webProjects";
 import WebProjectItem from "./WebProjectItem";
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import { generateNeonTextActivator } from "../utils/neonTextUtils";
+import { generateNeonTextActivator, generateNeonTextInlineStyle } from "../utils/neonTextUtils";
 
 export default function WebWork()
 {
@@ -30,26 +30,12 @@ export default function WebWork()
                     <span
                         className={styles["neon-one"]}
                         ref={neon1Ref}
-                        style={{
-                            "--off": "var(--neon-yellow-off)",
-                            "--on": `var(--neon-yellow)`,
-                            "--glow": "var(--glow-yellow)",
-                            "--backlight": "var(--backlight-yellow)",
-                            "--delay": "1s",
-                            "--count": "4"
-                        }}
+                        style={generateNeonTextInlineStyle("yellow", 1, 4)}
                     >My</span>
                     <span
                         className={styles["neon-two"]}
                         ref={neon2Ref}
-                        style={{
-                            "--off": "var(--neon-pink-off)",
-                            "--on": `var(--neon-pink)`,
-                            "--glow": "var(--glow-pink)",
-                            "--backlight": "var(--backlight-pink)",
-                            "--delay": ".5s",
-                            "--count": "2"
-                        }}
+                        style={generateNeonTextInlineStyle("pink", 0.5, 2)}
                     >Work</span>
                 </h2>
             </div>

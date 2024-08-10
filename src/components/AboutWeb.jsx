@@ -3,7 +3,7 @@ import { socialLinks } from "../data/socialLinks";
 import IconLink from "./IconLink";
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import { generateNeonTextActivator } from "../utils/neonTextUtils";
+import { generateNeonTextActivator, generateNeonTextInlineStyle } from "../utils/neonTextUtils";
 
 export default function AboutWeb()
 {
@@ -53,27 +53,13 @@ export default function AboutWeb()
                     <span
                         ref={neon1Ref}
                         className={styles["neon-one"]}
-                        style={{
-                            "--off": "var(--neon-blue-off)",
-                            "--on": `var(--neon-blue)`,
-                            "--glow": "var(--glow-blue)",
-                            "--backlight": "var(--backlight-blue)",
-                            "--delay": "1s",
-                            "--count": "2"
-                        }}
+                        style={generateNeonTextInlineStyle("blue", 1, 2)}
                     >Diaa</span>
                     <span className={styles["graffiti-two"]}>A</span>
                     <span
                         ref={neon2Ref}
                         className={styles["neon-two"]}
-                        style={{
-                            "--off": "var(--neon-gold-off)",
-                            "--on": `var(--neon-gold)`,
-                            "--glow": "var(--glow-gold)",
-                            "--backlight": "var(--backlight-gold)",
-                            "--delay": ".7s",
-                            "--count": "3"
-                        }}
+                        style={generateNeonTextInlineStyle("gold", 0.7, 3)}
                     >Front End <br /> Web Developer</span>
                 </h1>
             </div>

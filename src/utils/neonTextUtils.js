@@ -1,3 +1,15 @@
+export function generateNeonTextInlineStyle(color, animationDelay, animationCount)
+{
+    return {
+        "--off": `var(--neon-${color}-off)`,
+        "--on": `var(--neon-${color})`,
+        "--glow": `var(--glow-${color})`,
+        "--backlight": `var(--backlight-${color})`,
+        "--delay": `${animationDelay}s`,
+        "--count": `${animationCount}`
+    };
+}
+
 export function generateNeonTextActivator(activeClass)
 {
     return (entries) => {

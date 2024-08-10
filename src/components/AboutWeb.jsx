@@ -1,45 +1,36 @@
 import styles from "./AboutWeb.module.css";
 import { socialLinks } from "../data/socialLinks";
 import IconLink from "./IconLink";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 export default function AboutWeb()
 {
     const neon1Ref = useRef(null);
     const neon2Ref = useRef(null);
 
-    useEffect(() => {
-
-        //fallback if intersection observer isn't supported
-        if (!IntersectionObserver)
-        {
-            neon1Ref.current.classList.add(styles["active"]);
-            neon2Ref.current.classList.add(styles["active"]);
-
-            return () => {};
-        }
-
-        const neonObserver = new IntersectionObserver((entries) => {
-
-            entries.forEach(entry => {
+    useIntersectionObserver(
+    [
+        neon1Ref,
+        neon2Ref
+    ],
+    (entries) => {
+        entries.forEach(entry => {
                 
-                if (entry.isIntersecting)
-                {
-                    entry.target.classList.add(styles["active"]);
-                }
-                else
-                {
-                    entry.target.classList.remove(styles["active"]);
-                }
-            })
+            if (entry.isIntersecting)
+            {
+                entry.target.classList.add(styles["active"]);
+            }
+            else
+            {
+                entry.target.classList.remove(styles["active"]);
+            }
         });
-
-        neonObserver.observe(neon1Ref.current);
-        neonObserver.observe(neon2Ref.current);
-
-        return () => neonObserver.disconnect();
-        
-    }, []);
+    },
+    () => {
+        neon1Ref.current.classList.add(styles["active"]);
+        neon2Ref.current.classList.add(styles["active"]);
+    });
 
     return (
         <>
@@ -54,7 +45,7 @@ export default function AboutWeb()
                             "--on": `var(--neon-blue)`,
                             "--glow": "var(--glow-blue)",
                             "--backlight": "var(--backlight-blue)",
-                            "--delay": ".7s",
+                            "--delay": "1s",
                             "--count": "2"
                         }}
                     >Diaa</span>
@@ -67,7 +58,7 @@ export default function AboutWeb()
                             "--on": `var(--neon-gold)`,
                             "--glow": "var(--glow-gold)",
                             "--backlight": "var(--backlight-gold)",
-                            "--delay": ".5s",
+                            "--delay": ".7s",
                             "--count": "3"
                         }}
                     >Front End <br /> Web Developer</span>

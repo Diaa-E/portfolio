@@ -8,6 +8,7 @@ export default function AboutWeb()
 {
     const neon1Ref = useRef(null);
     const neon2Ref = useRef(null);
+    const bioRef = useRef(null);
 
     useIntersectionObserver(
     [
@@ -31,6 +32,28 @@ export default function AboutWeb()
         neon1Ref.current.classList.add(styles["active"]);
         neon2Ref.current.classList.add(styles["active"]);
     });
+
+    useIntersectionObserver(
+        [
+            bioRef
+        ],
+        (entries) => {
+            entries.forEach(entry => {
+                
+                if (entry.isIntersecting)
+                {
+                    entry.target.classList.add(styles["show-bio"]);
+                }
+                else
+                {
+                    entry.target.classList.remove(styles["show-bio"]);
+                }
+            });
+        },
+        () => {
+            bioRef.current.classList.add(styles["show-bio"]);
+        } 
+    )
 
     return (
         <>
@@ -73,7 +96,7 @@ export default function AboutWeb()
                 })
             }
             </ul>
-            <p className={styles["bio"]}>
+            <p ref={bioRef} className={styles["bio"]}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Labore molestiae blanditiis saepe impedit, ut soluta doloremque
                 ipsam excepturi voluptas, autem obcaecati veniam consectetur.

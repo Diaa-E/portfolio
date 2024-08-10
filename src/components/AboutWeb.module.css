@@ -75,4 +75,12 @@
 .bio{
     composes: bio from "../common.module.css";
     margin: 0 auto 10rem auto;
+    transform: translateY(-50px);
+    filter: opacity(0);
+}
+
+.show-bio{
+    transform: translateY(0);
+    filter: opacity(1);
+    transition: 1s ease-in-out;
 }

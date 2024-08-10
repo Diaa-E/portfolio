@@ -5,6 +5,7 @@ import styles from "./WebPortfolio.module.css";
 import { useEffect, useRef, useState } from "react";
 import WebWork from "../components/WebWork";
 import WebSkills from "../components/WebSkills";
+import Contact from "../components/Contact";
 
 export default function WebPortfolio() {
 
@@ -13,6 +14,7 @@ export default function WebPortfolio() {
     const aboutRef = useRef(null);
     const workRef = useRef(null);
     const skillsRef = useRef(null);
+    const contactRef = useRef(null);
 
     useEffect(() => {
 
@@ -23,6 +25,7 @@ export default function WebPortfolio() {
                 aboutRef.current,
                 workRef.current,
                 skillsRef.current,
+                contactRef.current
             ];
 
             //Section does not need to be at the very top to be highlighted
@@ -61,6 +64,10 @@ export default function WebPortfolio() {
                     {
                         to: "#skills",
                         text: "My Skills"
+                    },
+                    {
+                        to: "#contact",
+                        text: "Contact Me"
                     }
                 ]}
                 activeAnchor={currentSection}
@@ -76,6 +83,10 @@ export default function WebPortfolio() {
 
             <section ref={skillsRef} id="skills">
                 <WebSkills />
+            </section>
+
+            <section ref={contactRef} id="contact">
+                <Contact />
             </section>
 
             <footer className={styles["web-footer"]}>

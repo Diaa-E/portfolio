@@ -1,0 +1,57 @@
+.skills-header{
+    composes: bricks-background from "../common.module.css";
+    composes: section-header from "../common.module.css";
+    composes: parallax from "../common.module.css";
+    background-image: url("../assets/images/bricks_background.webp");
+}
+
+.contact-title{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact-title>span:first-child{
+    font-family: var(--font-neon-2);
+    color: var(--neon-blue);
+    text-shadow: var(--glow-blue);
+    background-image: var(--backlight-blue);
+    font-size: 4rem;
+}
+
+.contact-title>span:last-child{
+    font-family: var(--font-graffiti-2);
+    font-size: 3rem;
+    color: var(--graffiti-green);
+    transform: rotate(-25deg) translateY(20px);
+}
+
+.contact-icon{
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    background-position: center;
+    filter: var(--filter) drop-shadow(var(--glow));
+}
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+}
+
+.contact-item{
+    font-family: var(--font-default);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: center;
+    gap: 20px;
+    color: var(--text);
+}
+
+.contact-item>span{
+    padding: 5px;
+}

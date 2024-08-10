@@ -1,16 +1,45 @@
 import styles from "./AboutWeb.module.css";
 import { socialLinks } from "../data/socialLinks";
 import IconLink from "./IconLink";
+import { useEffect, useRef } from "react";
 
 export default function AboutWeb()
 {
+    const neon1Ref = useRef(null);
+    const neon2Ref = useRef(null);
+
+    useEffect(() => {
+
+        const neonObserver = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+                
+                if (entry.isIntersecting)
+                {
+                    entry.target.classList.add(styles["active"]);
+                }
+                else
+                {
+                    entry.target.classList.remove(styles["active"]);
+                }
+            })
+        });
+
+        neonObserver.observe(neon1Ref.current);
+        neonObserver.observe(neon2Ref.current);
+
+        return () => neonObserver.disconnect();
+        
+    }, []);
+
     return (
         <>
             <div className={styles["hero"]}>
                 <h1 className={styles["title"]}>
                     <span className={styles["graffiti-one"]}>Hi, I&apos;m</span>
                     <span
-                        className={[styles["neon-one"], styles["active"]].join(" ")}
+                        ref={neon1Ref}
+                        className={[styles["neon-one"]].join(" ")}
                         style={{
                             "--off": "var(--neon-blue-off)",
                             "--on": `var(--neon-blue)`,
@@ -22,7 +51,8 @@ export default function AboutWeb()
                     >Diaa</span>
                     <span className={styles["graffiti-two"]}>A</span>
                     <span
-                        className={[styles["neon-two"], styles["active"]].join(" ")}
+                        ref={neon2Ref}
+                        className={[styles["neon-two"]].join(" ")}
                         style={{
                             "--off": "var(--neon-gold-off)",
                             "--on": `var(--neon-gold)`,

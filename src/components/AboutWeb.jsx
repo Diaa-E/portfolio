@@ -10,6 +10,15 @@ export default function AboutWeb()
 
     useEffect(() => {
 
+        //fallback if intersection observer isn't supported
+        if (!IntersectionObserver)
+        {
+            neon1Ref.current.classList.add(styles["active"]);
+            neon2Ref.current.classList.add(styles["active"]);
+
+            return () => {};
+        }
+
         const neonObserver = new IntersectionObserver((entries) => {
 
             entries.forEach(entry => {

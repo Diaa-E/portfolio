@@ -11,27 +11,28 @@ export default function AboutWeb()
     const bioRef = useRef(null);
 
     useIntersectionObserver(
-    [
-        neon1Ref,
-        neon2Ref
-    ],
-    (entries) => {
-        entries.forEach(entry => {
-                
-            if (entry.isIntersecting)
-            {
-                entry.target.classList.add(styles["active"]);
-            }
-            else
-            {
-                entry.target.classList.remove(styles["active"]);
-            }
-        });
-    },
-    () => {
-        neon1Ref.current.classList.add(styles["active"]);
-        neon2Ref.current.classList.add(styles["active"]);
-    });
+        [
+            neon1Ref,
+            neon2Ref
+        ],
+        (entries) => {
+            entries.forEach(entry => {
+                    
+                if (entry.isIntersecting)
+                {
+                    entry.target.classList.add(styles["active"]);
+                }
+                else
+                {
+                    entry.target.classList.remove(styles["active"]);
+                }
+            });
+        },
+        () => {
+            neon1Ref.current.classList.add(styles["active"]);
+            neon2Ref.current.classList.add(styles["active"]);
+        }
+    );
 
     useIntersectionObserver(
         [

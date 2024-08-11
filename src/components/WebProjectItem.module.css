@@ -37,8 +37,16 @@
 .web-project-neon-strip{
     height: 1rem;
     width: 100%;
-    background-color: var(--on);
-    filter: drop-shadow(var(--glow-single));
+    background-color: var(--off);
+}
+
+.active .web-project-neon-strip{
+    animation-name: flicker-strip;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: var(--count);
+    animation-delay: var(--delay);
 }
 
 .active .web-project-title{
@@ -48,6 +56,17 @@
     animation-timing-function: linear;
     animation-iteration-count: var(--count);
     animation-delay: var(--delay);
+}
+
+@keyframes flicker-strip {
+    0% {
+        background-color: var(--off);
+    }
+
+    100% {
+        background-color: var(--on);
+        filter: drop-shadow(var(--glow-single));
+    }
 }
 
 @keyframes flicker-text {

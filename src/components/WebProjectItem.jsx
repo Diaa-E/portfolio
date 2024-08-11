@@ -26,7 +26,7 @@ export default function WebProjectItem({name, livePreview, source, image, descri
             ref={listItemRef}
             key={name}
             className={styles["web-project-item"]}
-            style={generateNeonTextInlineStyle(color, Math.random() * .5, Math.ceil(Math.random() * 3))}
+            style={generateNeonTextInlineStyle(color, Math.random() * .5, Math.ceil(Math.random() * 2) + 1)}
         >
             <img src={image} alt={name} />
             <div className={styles["web-project-details"]}>

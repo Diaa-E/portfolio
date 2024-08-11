@@ -4,6 +4,14 @@
     flex-direction: column;
     justify-items: center;
     gap: 2rem;
+    filter: opacity(0);
+    transform: translateX(-50px);
+    transition: .5s ease-in-out;
+}
+
+.active{
+    transform: translateX(0);
+    filter: opacity(1);
 }
 
 .web-project-links{

@@ -3,11 +3,27 @@ import codeIcon from "../assets/icons/code.svg";
 import previewIcon from "../assets/icons/preview.svg";
 import IconLink from "./IconLink";
 import PropTypes from "prop-types";
+import { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { generateNeonTextActivator } from "../utils/neonTextUtils";
 
 export default function WebProjectItem({name, livePreview, source, image, description, color})
 {
+    const listItemRef = useRef(null);
+
+    useIntersectionObserver(
+        [
+            listItemRef
+        ],
+        generateNeonTextActivator(styles["active"]),
+        () => {
+            listItemRef.current.classList.add(styles["active"])
+        }
+    )
+
     return (
         <li
+            ref={listItemRef}
             key={name}
             className={styles["web-project-item"]}
         >

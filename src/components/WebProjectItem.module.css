@@ -35,13 +35,16 @@
 }
 
 .web-project-title{
-    color: var(--text);
     font-family: var(--font-default);
     font-size: 1.5rem;
     text-align: left;
+    filter: drop-shadow(var(--glow));
+    color: var(--on);
 }
 
 .web-project-neon-strip{
     height: 1rem;
     width: 100%;
+    background-color: var(--on);
+    filter: drop-shadow(var(--glow));
 }

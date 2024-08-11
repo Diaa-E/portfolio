@@ -26,16 +26,17 @@ export default function WebProjectItem({name, livePreview, source, image, descri
             ref={listItemRef}
             key={name}
             className={styles["web-project-item"]}
+            style={{
+                "--glow": `var(--glow-single-${color})`,
+                "--on": `var(--neon-${color})`,
+                "--off": `var(--neon-${color}-off)`,
+            }}
         >
             <img src={image} alt={name} />
             <div className={styles["web-project-details"]}>
                 <span>
                     <h3
                         className={styles["web-project-title"]}
-                        style={{
-                            color: `var(--neon-${color})`,
-                            filter: `drop-shadow(var(--glow-single-${color}))`
-                        }}
                     >{name}</h3>
                     <p className={styles["web-project-description"]}>{description}</p>
                 </span>
@@ -52,10 +53,6 @@ export default function WebProjectItem({name, livePreview, source, image, descri
             </div>
             <div
                 className={styles["web-project-neon-strip"]}
-                style={{
-                    backgroundColor: `var(--neon-${color})`,
-                    filter: `drop-shadow(var(--glow-single-${color}))`,
-                }}
             ></div>
         </li>
     )

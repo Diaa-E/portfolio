@@ -4,14 +4,7 @@
     flex-direction: column;
     justify-items: center;
     gap: 2rem;
-    filter: opacity(0);
-    transform: translateX(-50px);
     transition: .5s ease-in-out;
-}
-
-.active{
-    transform: translateX(0);
-    filter: opacity(1);
 }
 
 .web-project-links{
@@ -38,7 +31,7 @@
     font-family: var(--font-default);
     font-size: 1.5rem;
     text-align: left;
-    filter: drop-shadow(var(--glow));
+    filter: drop-shadow(var(--glow-single));
     color: var(--on);
 }
 
@@ -46,5 +39,9 @@
     height: 1rem;
     width: 100%;
     background-color: var(--on);
-    filter: drop-shadow(var(--glow));
+    filter: drop-shadow(var(--glow-single));
+}
+
+.active {
+
 }

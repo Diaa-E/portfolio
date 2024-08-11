@@ -4,6 +4,7 @@ export function generateNeonTextInlineStyle(color, animationDelay, animationCoun
         "--off": `var(--neon-${color}-off)`,
         "--on": `var(--neon-${color})`,
         "--glow": `var(--glow-${color})`,
+        "--glow-single": `var(--glow-single-${color})`,
         "--backlight": `var(--backlight-${color})`,
         "--delay": `${animationDelay}s`,
         "--count": `${animationCount}`

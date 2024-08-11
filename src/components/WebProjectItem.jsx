@@ -5,7 +5,7 @@ import IconLink from "./IconLink";
 import PropTypes from "prop-types";
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import { generateNeonTextActivator } from "../utils/neonTextUtils";
+import { generateNeonTextActivator, generateNeonTextInlineStyle } from "../utils/neonTextUtils";
 
 export default function WebProjectItem({name, livePreview, source, image, description, color})
 {
@@ -26,11 +26,7 @@ export default function WebProjectItem({name, livePreview, source, image, descri
             ref={listItemRef}
             key={name}
             className={styles["web-project-item"]}
-            style={{
-                "--glow": `var(--glow-single-${color})`,
-                "--on": `var(--neon-${color})`,
-                "--off": `var(--neon-${color}-off)`,
-            }}
+            style={generateNeonTextInlineStyle(color, Math.random(), Math.floor(Math.random() * 3))}
         >
             <img src={image} alt={name} />
             <div className={styles["web-project-details"]}>

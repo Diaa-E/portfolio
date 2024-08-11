@@ -5,7 +5,7 @@ export default function useIntersectionObserver(refsArray, intersectionCallback,
     useEffect(() => {
 
         //fallback if intersection observer isn't supported
-        if (!IntersectionObserver)
+        if (!"IntersectionObserver" in window)
         {
             fallbackCallback();
 

@@ -17,6 +17,9 @@
 .web-project-description{
     color: var(--text);
     text-align: left;
+    transform: translateY(-30px);
+    filter: opacity(0);
+    transition: .5s ease-in-out;
 }
 
 .web-project-details{
@@ -38,6 +41,11 @@
     height: 1rem;
     width: 100%;
     background-color: var(--off);
+}
+
+.active .web-project-description{
+    transform: translateY(0);
+    filter: opacity(1);
 }
 
 .active .web-project-neon-strip{

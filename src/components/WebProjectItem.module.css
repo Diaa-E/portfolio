@@ -31,8 +31,7 @@
     font-family: var(--font-default);
     font-size: 1.5rem;
     text-align: left;
-    filter: drop-shadow(var(--glow-single));
-    color: var(--on);
+    color: var(--off);
 }
 
 .web-project-neon-strip{
@@ -42,6 +41,22 @@
     filter: drop-shadow(var(--glow-single));
 }
 
-.active {
+.active .web-project-title{
+    animation-name: flicker-text;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: var(--count);
+    animation-delay: var(--delay);
+}
 
+@keyframes flicker-text {
+    0% {
+        color: var(--off);
+    }
+
+    100%{
+        color: var(--on);
+        filter: drop-shadow(var(--glow-single))
+    }
 }

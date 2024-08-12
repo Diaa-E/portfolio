@@ -24,7 +24,7 @@ export default function SkillItem({ name, color, tools = [] })
     return (
         <div
             className={styles["tools-wrapper"]}
-            style={generateNeonTextInlineStyle(color, Math.random() * .7, Math.ceil(Math.random() * 2) + 1)}
+            style={generateNeonTextInlineStyle(color, 0.5, 3)}
         >
             <h3 ref={titleRef} className={styles["skill-name"]}>{name}</h3>
             <ul  ref={itemRef} className={styles["tools-list"]}>

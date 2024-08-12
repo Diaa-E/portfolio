@@ -11,8 +11,9 @@
     display: flex;
     justify-items: center;
     justify-content: center;
-    gap: 2rem;
     flex-wrap: wrap;
+    gap: 0;
+    transition: .5s ease-in-out;
 }
 
 .tool-name{
@@ -28,8 +29,7 @@
 }
 
 .skill-name{
-    color: var(--color);
-    filter: drop-shadow(var(--glow));
+    color: var(--off);
     font-size: 1.5rem;
     margin: 1rem 0;
 }
@@ -37,6 +37,49 @@
 .neon-strip{
     width: 5px;
     height: 100%;
-    background-color: var(--color);
-    filter: drop-shadow(var(--glow));
+    background-color: var(--off);
+}
+
+.active.tools-list{
+    gap: 3rem;
+}
+
+.active .neon-strip{
+    animation-name: flicker-strip;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: var(--count);
+    animation-delay: var(--delay);
+}
+
+.active.skill-name{
+    animation-name: flicker-text;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: var(--count);
+    animation-delay: var(--delay);
+}
+
+@keyframes flicker-strip {
+    0% {
+        background-color: var(--off);
+    }
+
+    100% {
+        background-color: var(--on);
+        filter: drop-shadow(var(--glow-single));
+    }
+}
+
+@keyframes flicker-text {
+    0% {
+        color: var(--off);
+    }
+
+    100%{
+        color: var(--on);
+        filter: drop-shadow(var(--glow-single))
+    }
 }

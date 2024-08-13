@@ -7,6 +7,11 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
     return (
         <nav className={styles["nav-bar"]}>
             <ul className={styles["link-list"]}>
+                <li>
+                    <Link to={"/"}>Home</Link>
+                </li>
+            </ul>
+            <ul className={styles["link-list"]}>
             {
                 scrollAnchors.map(anchor => (
                     <li key={anchor.to} >
@@ -17,11 +22,6 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                     </li>
                 ))
             }
-            </ul>
-            <ul className={styles["link-list"]}>
-                <li>
-                    <Link to={"/"}>Home</Link>
-                </li>
             </ul>
 
             <button aria-label="open section menu" className={styles["ham-menu-button"]}></button>

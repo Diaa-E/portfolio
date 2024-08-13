@@ -23,6 +23,8 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                     <Link to={"/"}>Home</Link>
                 </li>
             </ul>
+
+            <button aria-label="open section menu" className={styles["ham-menu-button"]}></button>
         </nav>
     )
 }

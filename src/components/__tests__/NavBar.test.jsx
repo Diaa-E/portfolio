@@ -21,7 +21,7 @@ describe("NavBar Component", () => {
 
         setup(<NavBar scrollAnchors={scrollAnchors} activeAnchor={"one"} />);
 
-        expect(screen.queryByRole("link", { name: /home/i })).toBeInTheDocument();
+        expect(screen.queryAllByRole("link", { name: /home/i })[0]).toBeInTheDocument();
     });
 
     it("Renders links from scroll anchors prop array", () => {

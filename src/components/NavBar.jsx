@@ -27,11 +27,11 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
             <a
                 aria-label="home"
                 href="/"
-                className={[styles["nav-button"], styles["home-button"]].join(" ")}
+                className={`${styles["nav-button"]} ${styles["home-button"]}`}
             ></a>
             <button
                 aria-label="open section menu"
-                className={[styles["nav-button"], styles["ham-menu-button"]].join(" ")}
+                className={`${styles["nav-button"]} ${styles["ham-menu-button"]}`}
             ></button>
         </nav>
     )

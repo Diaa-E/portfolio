@@ -24,7 +24,15 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
             }
             </ul>
 
-            <button aria-label="open section menu" className={styles["ham-menu-button"]}></button>
+            <a
+                aria-label="home"
+                href="/"
+                className={[styles["nav-button"], styles["home-button"]].join(" ")}
+            ></a>
+            <button
+                aria-label="open section menu"
+                className={[styles["nav-button"], styles["ham-menu-button"]].join(" ")}
+            ></button>
         </nav>
     )
 }

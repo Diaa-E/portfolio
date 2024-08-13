@@ -41,8 +41,7 @@ a.active-section{
     transition: 0.2s ease-in-out;
 }
 
-.ham-menu-button{
-    background-image: url("../assets/icons/ham_menu.svg");
+.nav-button{
     background-size: 40px;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +51,15 @@ a.active-section{
     padding: 2rem;
 }
 
-.ham-menu-button:hover{
+.home-button{
+    background-image: url("../assets/icons/home.svg");
+}
+
+.ham-menu-button{
+    background-image: url("../assets/icons/ham_menu.svg");
+}
+
+.nav-button:hover{
     filter: var(--filter-neon-blue) drop-shadow(var(--glow-single-blue));
 }
 

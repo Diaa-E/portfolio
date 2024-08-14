@@ -20,7 +20,7 @@
 .bio{
     font-family: var(--font-default);
     color: var(--text);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     max-width: 700px;
 }
 
@@ -33,10 +33,4 @@
     align-items: flex-start;
     justify-items: center;
     justify-content: center;
-}
-
-@media (min-width: 800px) {
-    .bio{
-        font-size: 1.5rem;
-    }
 }

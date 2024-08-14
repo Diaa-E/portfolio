@@ -17,21 +17,21 @@
 .graffiti-one{
     font-family: var(--font-graffiti-1);
     color: var(--graffiti-magenta);
-    transform: translateX(200px) translateY(50px) rotate(30deg);
-    font-size: 3rem;
+    transform: translateX(150px) translateY(10px) rotate(30deg);
+    font-size: 4rem;
 }
 
 .graffiti-two{
     font-family: var(--font-graffiti-2);
     color: var(--graffiti-green);
     transform: translateX(50px);
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .neon-one{
     font-family: var(--font-neon-1);
     color: var(--neon-blue-off);
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .active{
@@ -60,7 +60,7 @@
     text-align: center;
     font-family: var(--font-neon-2);
     color: var(--neon-gold-off);
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .social-links-wrapper{
@@ -92,14 +92,6 @@
     }
 
     .graffiti-one{
-        font-size: 4rem;
-    }
-
-    .graffiti-two{
-        font-size: 4rem;
-    }
-
-    .neon-two{
-        font-size: 5rem;
+        transform: translateX(200px) translateY(50px) rotate(30deg);
     }
 }

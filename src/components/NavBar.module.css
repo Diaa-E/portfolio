@@ -63,6 +63,82 @@ a.active-section{
     filter: var(--filter-neon-blue) drop-shadow(var(--glow-single-blue));
 }
 
+.nav-menu{
+    height: 100%;
+    width: 100%;
+    margin: auto auto;
+    background-color: var(--none);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 5rem;
+}
+
+.nav-menu::backdrop{
+    display: flex;
+    place-items: center;
+    place-content: center;
+    background-color: var(--background-trans);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.close-button{
+    background-color: var(--none);
+    background-image: url("../assets/icons/close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+}
+
+.nav-menu-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+.nav-menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.nav-menu-list a, .nav-menu-list a:visited{
+    text-align: left;
+    display: block;
+    font-family: var(--font-default);
+    color: var(--text);
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.nav-menu-list li{
+    width: 100%;
+}
+
+.nav-menu-title>h2{
+    font-family: var(--font-default);
+    font-size: 2rem;
+}
+
+.active-menu-section{
+    color: var(--neon-blue);
+    filter: drop-shadow(var(--glow-single-blue));
+    border-left: 5px solid var(--neon-blue);
+}
+
 @media (min-width: 800px) {
     
     .ham-menu-button{

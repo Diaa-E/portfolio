@@ -1,9 +1,26 @@
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useEffect, useRef, useState } from "react";
 
 export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], activeAnchor })
 {
+    const [navMenuOpen, setNavMenuOpen] = useState(true);
+    const dialogRef = useRef(null);
+
+    useEffect(() => {
+
+        if (navMenuOpen)
+        {
+            dialogRef.current?.showModal();
+        }
+        else
+        {
+            dialogRef.current?.close();
+        }
+
+    }, [navMenuOpen])
+
     return (
         <nav className={styles["nav-bar"]}>
             <ul className={styles["link-list"]}>
@@ -32,7 +49,34 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
             <button
                 aria-label="open section menu"
                 className={`${styles["nav-button"]} ${styles["ham-menu-button"]}`}
+                onClick={() => setNavMenuOpen(true)}
             ></button>
+            {
+                navMenuOpen &&
+                <dialog className={styles["nav-menu"]} ref={dialogRef}>
+                    <div className={styles["nav-menu-title"]}>
+                        <h2>Go to</h2>
+                        <button
+                            className={styles["close-button"]}
+                            aria-label="Close menu"
+                            onClick={() => setNavMenuOpen(false)}
+                        ></button>
+                    </div>
+                    <ul className={styles["nav-menu-list"]}>
+                    {
+                        scrollAnchors.map(anchor => (
+                            <li key={anchor.to} >
+                                <a
+                                    className={"#" + activeAnchor === anchor.to ? styles["active-menu-section"] : ""}
+                                    href={anchor.to}
+                                    onClick={() => setNavMenuOpen(false)}
+                                >{anchor.text}</a>
+                            </li>
+                        ))
+                    }
+                    </ul>
+                </dialog>
+            }
         </nav>
     )
 }

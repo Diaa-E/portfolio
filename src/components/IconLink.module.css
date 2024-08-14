@@ -2,27 +2,15 @@
     color: var(--text);
     display: flex;
     gap: 10px;
+    filter: var(--filter);
 }
 
 .link-text{
     font-family: var(--font-default);
     cursor: pointer;
-    width: 0;
-    overflow: hidden;
-    transition-duration: .2s;
-    transition-timing-function: ease-in-out;
-}
-
-.social-link:hover .link-text{
     width: 50px;
-}
-
-.social-link:hover{
-    filter: var(--filter);
-}
-
-.social-link:hover .social-link-icon{
-    filter: drop-shadow(var(--glow));
+    overflow: hidden;
+    transition: .2s ease-in-out;
 }
 
 .social-link-icon{
@@ -31,4 +19,34 @@
     cursor: pointer;
     height: 30px;
     width: 30px;
+    filter: drop-shadow(var(--glow));
+}
+
+@media (min-width: 800px) {
+
+    .social-link, .social-link:visited{
+        filter: none;
+    }
+
+    .link-text{
+        width: 0;
+        overflow: hidden;
+        transition: .2s ease-in-out;
+    }
+    
+    .social-link:hover .link-text{
+        width: 50px;
+    }
+
+    .social-link-icon{
+        filter: none;
+    }
+
+    .social-link:hover .social-link-icon{
+        filter: drop-shadow(var(--glow));
+    }
+
+    .social-link:hover{
+        filter: var(--filter);
+    }
 }

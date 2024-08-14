@@ -18,21 +18,20 @@
     font-family: var(--font-graffiti-1);
     color: var(--graffiti-magenta);
     transform: translateX(200px) translateY(50px) rotate(30deg);
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .graffiti-two{
     font-family: var(--font-graffiti-2);
     color: var(--graffiti-green);
     transform: translateX(50px);
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .neon-one{
     font-family: var(--font-neon-1);
     color: var(--neon-blue-off);
-    font-size: 5rem;
-    margin-left: -100px;
+    font-size: 4rem;
 }
 
 .active{
@@ -61,7 +60,7 @@
     text-align: center;
     font-family: var(--font-neon-2);
     color: var(--neon-gold-off);
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .social-links-wrapper{
@@ -83,4 +82,24 @@
 .show-bio{
     transform: translateX(0);
     filter: opacity(1);
+}
+
+@media (min-width: 800px) {
+    
+    .neon-one{
+        font-size: 5rem;
+        transform: translateX(-100px);
+    }
+
+    .graffiti-one{
+        font-size: 4rem;
+    }
+
+    .graffiti-two{
+        font-size: 4rem;
+    }
+
+    .neon-two{
+        font-size: 5rem;
+    }
 }

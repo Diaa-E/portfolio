@@ -69,6 +69,10 @@ a.active-section{
         display: none;
     }
 
+    .home-button{
+        display: none;
+    }
+
     .link-list{
         display: flex;
     }

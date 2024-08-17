@@ -12,6 +12,7 @@
 }
 
 .graffiti-one{
+    font-size: 3rem;
     font-family: var(--font-graffiti-2);
     color: var(--graffiti-magenta);
 }

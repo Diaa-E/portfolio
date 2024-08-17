@@ -1,15 +1,20 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import NavBar from "../NavBar";
 import { BrowserRouter } from "react-router-dom";
 
-describe("NavBar Component", () => {
+describe("NavBar Component - Wide Screen", () => {
 
     function setup(jsx) {
         return {
             ...render(jsx, { wrapper: BrowserRouter })
         }
     }
+
+    beforeEach(() => {
+
+        window.innerWidth = 1000
+    });
 
     it("Renders a link to home page", () => {
 
@@ -21,7 +26,7 @@ describe("NavBar Component", () => {
 
         setup(<NavBar scrollAnchors={scrollAnchors} activeAnchor={"one"} />);
 
-        expect(screen.queryAllByRole("link", { name: /home/i })[0]).toBeInTheDocument();
+        expect(screen.queryByRole("link", { name: /home/i })).toBeInTheDocument();
     });
 
     it("Renders links from scroll anchors prop array", () => {

@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], activeAnchor })
 {
-    const [navMenuOpen, setNavMenuOpen] = useState(true);
+    const [navMenuOpen, setNavMenuOpen] = useState(false);
     const dialogRef = useRef(null);
 
     useEffect(() => {

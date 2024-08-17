@@ -19,6 +19,19 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
 
     }, []);
 
+    useEffect(() => {
+
+        if (navMenuOpen)
+        {
+            document.body.classList.add(styles["lock-scroll"]);
+        }
+        else
+        {
+            document.body.classList.remove(styles["lock-scroll"]);
+        }
+
+    }, [navMenuOpen]);
+
     return (
         <nav className={styles["nav-bar"]}>
             {

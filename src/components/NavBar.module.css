@@ -135,3 +135,7 @@ a.active-section{
     filter: drop-shadow(var(--glow-single-blue));
     border-left: 5px solid var(--neon-blue);
 }
+
+.lock-scroll{
+    overflow: clip;
+}

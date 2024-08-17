@@ -7,7 +7,6 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
 {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-    const dialogRef = useRef(null);
 
     useEffect(() => {
 
@@ -19,21 +18,6 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
         return () => window.removeEventListener("resize", window);
 
     }, []);
-
-    useEffect(() => {
-
-        if (navMenuOpen)
-        {
-            dialogRef.current?.showModal();
-        }
-        else
-        {
-            dialogRef.current?.close();
-        }
-
-        return () => {}
-
-    }, [navMenuOpen])
 
     return (
         <nav className={styles["nav-bar"]}>
@@ -74,7 +58,7 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                     ></button>
                     {
                         navMenuOpen &&
-                        <dialog className={styles["nav-menu"]} ref={dialogRef}>
+                        <div role="dialog" className={styles["nav-menu"]}>
                             <div className={styles["nav-menu-title"]}>
                                 <h2>Go to</h2>
                                 <button
@@ -96,7 +80,7 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                                 ))
                             }
                             </ul>
-                        </dialog>
+                        </div>
                     }
                 </>
             }

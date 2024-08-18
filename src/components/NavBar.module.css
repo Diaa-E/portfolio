@@ -81,14 +81,20 @@ a.active-section{
     gap: 5rem;
     background-color: var(--background);
     padding: 1rem;
-    transition: .5s ease-in-out;
     margin: 0 -1rem;
-    animation-name: open-menu;
+    transition: .5s ease-in-out;
     animation-duration: .5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-direction: normal;
-    animation-iteration-count: 1;
+}
+
+.nav-menu-open{
+    animation-name: open-menu;
+}
+
+.nav-menu-close{
+    animation-name: close-menu;
 }
 
 .close-button{
@@ -155,5 +161,15 @@ a.active-section{
 
     to {
         transform: translateX(0);
+    }
+}
+
+@keyframes close-menu {
+    from {
+        transform: translateX(0);
+    }
+    
+    to {
+        transform: translateX(-100%);
     }
 }

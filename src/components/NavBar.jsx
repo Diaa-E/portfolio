@@ -1,12 +1,16 @@
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import useUnmountDelay from "../hooks/useUnmountDelay";
 
 export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], activeAnchor })
 {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+    const [navMounted, setNavMounted] = useUnmountDelay(() => {
+        setNavMenuOpen(false);
+    }, 500);
 
     useEffect(() => {
 
@@ -67,17 +71,25 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                     <button
                         aria-label="open section menu"
                         className={`${styles["nav-button"]} ${styles["ham-menu-button"]}`}
-                        onClick={() => setNavMenuOpen(true)}
+                        onClick={() => {
+                            setNavMounted(true);
+                            setNavMenuOpen(true);
+                        }}
                     ></button>
                     {
                         navMenuOpen &&
-                        <div role="dialog" className={styles["nav-menu"]}>
+                        <div
+                            role="dialog"
+                            className={`${styles["nav-menu"]} ${navMounted ? styles["nav-menu-open"] : styles["nav-menu-close"]}`}
+                        >
                             <div className={styles["nav-menu-title"]}>
                                 <h2>Go to</h2>
                                 <button
                                     className={styles["close-button"]}
                                     aria-label="Close menu"
-                                    onClick={() => setNavMenuOpen(false)}
+                                    onClick={() => {
+                                        setNavMounted(false);
+                                    }}
                                 ></button>
                             </div>
                             <ul className={styles["nav-menu-list"]}>

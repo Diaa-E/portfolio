@@ -98,11 +98,11 @@ a.active-section{
 }
 
 .close-button{
+    background-size: 40px;
     background-color: var(--none);
     background-image: url("../assets/icons/close.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
     height: 50px;
     width: 50px;
 }
@@ -113,7 +113,7 @@ a.active-section{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .nav-menu-list{

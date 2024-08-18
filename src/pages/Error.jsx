@@ -8,14 +8,14 @@ export default function Error()
     console.error(`${error.status}: ${error.statusText}`);
     
     return (
-        <>
-            <h1>Error</h1>
-            <h2>{error.status}: {error.statusText}</h2>
-            <ul>
+        <div className={styles["error-background"]}>
+            <h1 className={styles["error-title"]}>Error</h1>
+            <h2 className={styles["error-details"]}>{error.status}: {error.statusText}</h2>
+            <ul className={styles["nav-list"]}>
                 <li>
-                    <Link to={"/"}>Home</Link>
+                    <Link className={styles["home-link"]} to={"/"}>Home</Link>
                 </li>
             </ul>
-        </>
+        </div>
     )
 }

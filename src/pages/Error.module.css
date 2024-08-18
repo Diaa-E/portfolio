@@ -1,0 +1,39 @@
+.error-background{
+    display: flex;
+    composes: bricks-background from "../common.module.css";
+    background-image: url("../assets/images/bricks_background.webp");
+    flex-direction: column;
+    height: 100dvh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.error-title{
+    font-size: 5rem;
+    color: var(--neon-red);
+    text-shadow: var(--glow-red);
+    background-image: var(--backlight-red);
+    font-family: var(--font-neon-2);
+}
+
+.error-details{
+    font-size: 3rem;
+    color: var(--neon-red);
+    text-shadow: var(--glow-red);
+    background-image: var(--backlight-red);
+    font-family: var(--font-neon-2);
+}
+
+.home-link, .home-link:visited{
+    font-size: 2rem;
+    color: var(--neon-blue);
+    text-shadow: var(--glow-blue);
+    background-image: var(--backlight-blue);
+    font-family: var(--font-neon-2);
+}
+
+.nav-list{
+    margin: 5rem 0 0 0;
+}

@@ -11,9 +11,11 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
     const [navMounted, mountNav, unmountNav] = useUnmountDelay(
         () => {
             setNavMenuOpen(false);
+            document.body.classList.remove(styles["lock-scroll"]);
         },
         () => {
             setNavMenuOpen(true);
+            document.body.classList.add(styles["lock-scroll"]);
         },
         500);
 
@@ -27,19 +29,6 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
         return () => window.removeEventListener("resize", window);
 
     }, []);
-
-    useEffect(() => {
-
-        if (navMenuOpen)
-        {
-            document.body.classList.add(styles["lock-scroll"]);
-        }
-        else
-        {
-            document.body.classList.remove(styles["lock-scroll"]);
-        }
-
-    }, [navMenuOpen]);
 
     return (
         <nav className={styles["nav-bar"]}>

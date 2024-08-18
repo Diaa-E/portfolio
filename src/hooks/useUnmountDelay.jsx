@@ -1,19 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export default function useUnmountDelay(unmountCallback, unmountDelayMs)
+export default function useUnmountDelay(unmountCallback, mountCallback, unmountDelayMs)
 {
     const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
+    function mount()
+    {
+        setMounted(true);
+        mountCallback();
+    }
 
-        if (!mounted)
-        {
-            const timer = setTimeout(unmountCallback, unmountDelayMs);
+    function unmount()
+    {
+        setMounted(false);
+        setTimeout(unmountCallback, unmountDelayMs);
+    }
 
-            return () => clearTimeout(timer);
-        }
-
-    }, [mounted]);
-
-    return [mounted, setMounted];
+    return [mounted, mount, unmount];
 }

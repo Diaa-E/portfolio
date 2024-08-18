@@ -8,9 +8,14 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
 {
     const [navMenuOpen, setNavMenuOpen] = useState(false);
     const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-    const [navMounted, setNavMounted] = useUnmountDelay(() => {
-        setNavMenuOpen(false);
-    }, 500);
+    const [navMounted, mountNav, unmountNav] = useUnmountDelay(
+        () => {
+            setNavMenuOpen(false);
+        },
+        () => {
+            setNavMenuOpen(true);
+        },
+        500);
 
     useEffect(() => {
 
@@ -71,10 +76,7 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                     <button
                         aria-label="open section menu"
                         className={`${styles["nav-button"]} ${styles["ham-menu-button"]}`}
-                        onClick={() => {
-                            setNavMounted(true);
-                            setNavMenuOpen(true);
-                        }}
+                        onClick={() => mountNav()}
                     ></button>
                     {
                         navMenuOpen &&
@@ -87,9 +89,7 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                                 <button
                                     className={styles["close-button"]}
                                     aria-label="Close menu"
-                                    onClick={() => {
-                                        setNavMounted(false);
-                                    }}
+                                    onClick={() => unmountNav()}
                                 ></button>
                             </div>
                             <ul className={styles["nav-menu-list"]}>
@@ -99,7 +99,7 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                                         <a
                                             className={"#" + activeAnchor === anchor.to ? styles["active-menu-section"] : ""}
                                             href={anchor.to}
-                                            onClick={() => setNavMounted(false)}
+                                            onClick={() => unmountNav()}
                                         >{anchor.text}</a>
                                     </li>
                                 ))

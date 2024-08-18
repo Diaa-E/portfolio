@@ -83,6 +83,12 @@ a.active-section{
     padding: 1rem;
     transition: .5s ease-in-out;
     margin: 0 -1rem;
+    animation-name: open-menu;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-iteration-count: 1;
 }
 
 .close-button{
@@ -139,4 +145,15 @@ a.active-section{
 
 .lock-scroll{
     overflow: clip;
+}
+
+@keyframes open-menu {
+    
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }

@@ -99,7 +99,7 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
                                         <a
                                             className={"#" + activeAnchor === anchor.to ? styles["active-menu-section"] : ""}
                                             href={anchor.to}
-                                            onClick={() => setNavMenuOpen(false)}
+                                            onClick={() => setNavMounted(false)}
                                         >{anchor.text}</a>
                                     </li>
                                 ))

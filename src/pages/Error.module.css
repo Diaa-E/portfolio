@@ -12,28 +12,51 @@
 
 .error-title{
     font-size: 5rem;
-    color: var(--neon-red);
-    text-shadow: var(--glow-red);
-    background-image: var(--backlight-red);
     font-family: var(--font-neon-2);
+    color: var(--neon-red-off);
+    animation-name: flicker;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-delay: .5s;
 }
 
 .error-details{
     font-size: 3rem;
-    color: var(--neon-red);
-    text-shadow: var(--glow-red);
-    background-image: var(--backlight-red);
+    color: var(--neon-red-off);
     font-family: var(--font-neon-2);
+    animation-name: flicker;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    animation-delay: .7s;
 }
 
 .home-link, .home-link:visited{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: var(--text);
+    font-family: var(--font-default);
+}
+
+.home-link:hover{
     color: var(--neon-blue);
-    text-shadow: var(--glow-blue);
-    background-image: var(--backlight-blue);
-    font-family: var(--font-neon-2);
+    font-family: var(--font-default);
+    filter: drop-shadow(var(--glow-single-blue));
 }
 
 .nav-list{
     margin: 5rem 0 0 0;
+}
+
+@keyframes flicker {
+    from {
+        color: var(--neon-red-off);
+    }
+    to {
+        color: var(--neon-red);
+        background-image: var(--backlight-red);
+        text-shadow: var(--glow-red);
+    }
 }

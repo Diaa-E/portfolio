@@ -150,7 +150,7 @@ a.active-section{
 }
 
 .lock-scroll{
-    overflow: clip;
+    overflow: hidden;
 }
 
 @keyframes open-menu {

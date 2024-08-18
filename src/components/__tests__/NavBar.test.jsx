@@ -1,5 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { beforeEach, describe, expect, it } from "vitest";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import NavBar from "../NavBar";
 import { BrowserRouter } from "react-router-dom";
 
@@ -70,7 +70,10 @@ describe("NavBar Component - Small Screen", () => {
     beforeEach(() => {
 
         window.innerWidth = 500
+        vi.useFakeTimers();
     });
+
+    afterEach(() => vi.restoreAllMocks());
 
     it("Renders a link to home page", () => {
 
@@ -124,6 +127,30 @@ describe("NavBar Component - Small Screen", () => {
         fireEvent.click(menuButton);
 
         expect(screen.queryByRole("dialog")).toBeInTheDocument();
+    });
+
+    it("Closes nav menu when close menu button is clicked", () => {
+
+        const scrollAnchors = [
+            { 
+                to: "#one", text: "anchor one" 
+            },
+        ];
+
+        setup(<NavBar scrollAnchors={scrollAnchors} activeAnchor={"one"} />);
+        const menuButton = screen.queryByRole("button", { name: /menu/i });
+        fireEvent.click(menuButton);
+
+        expect(screen.queryByRole("dialog")).toBeInTheDocument();
+
+        const closeButton = screen.queryByRole("button", { name: /close/i });
+        
+        act(() => {
+            fireEvent.click(closeButton);
+            vi.runAllTimers();
+        });
+
+        expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     });
 
     it("Renders links from scroll anchors prop array", () => {

@@ -24,6 +24,12 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
         window.addEventListener("resize", () => {
 
             setInnerWidth(window.innerWidth);
+
+            if (window.innerWidth >= 800)
+            {
+                document.body.classList.remove(styles["lock-scroll"]);
+                unmountNav();
+            }
         });
 
         return () => window.removeEventListener("resize", window);

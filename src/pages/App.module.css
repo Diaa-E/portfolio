@@ -2,31 +2,12 @@
     composes: bricks-background from "../common.module.css";
     background-image: url("../assets/images/bricks_background.webp");
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-items: center;
     align-content: center;
     justify-content: space-around;
     height: 100dvh;
     user-select: none;
-}
-
-.graffiti-one{
-    font-size: 3rem;
-    font-family: var(--font-graffiti-2);
-    color: var(--graffiti-magenta);
-}
-
-.title{
-    display: flex;
-    flex-direction: column;
-}
-
-.graffiti-two{
-    transform:rotate(15deg);
-    font-size: 7rem;
-    font-family: var(--font-graffiti-2);
-    color: var(--graffiti-green);
 }
 
 .links-wrapper{

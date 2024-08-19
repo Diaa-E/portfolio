@@ -1,23 +1,23 @@
 .topic-background{
     composes: bricks-background from "../common.module.css";
     background-image: url("../assets/images/bricks_background.webp");
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: space-around;
     height: 100dvh;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .links-wrapper{
     display: flex;
-    gap: 350px;
+    align-content: space-around;
+    justify-content: space-around;
 }
 
 .links-wrapper>li{
     display: flex;
     place-items: center;
+    height: min-content;
     background-image: var(--backlight);
 }
 
@@ -26,6 +26,19 @@
     font-family: var(--font-neon-2);
     color: var(--on);
     filter: drop-shadow(var(--glow));
+    border: solid 5px var(--on);
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+
+.arrow{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../assets/icons/arrow.svg");
+    height: 100px;
+    width: 100px;
+    filter: var(--filter) drop-shadow(var(--glow));
 }
 
 .web-link, .web-link:visited{

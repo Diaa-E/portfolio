@@ -15,6 +15,7 @@ function App() {
           "--on": `var(--neon-${color1})`,
           "--backlight": `var(--backlight-${color1})`,
           "--glow": `var(--glow-single-${color1})`,
+          "--filter": `var(--filter-neon-${color1})`
         }}>
           <Link className={styles["web-link"]} to={"web"}>Web Dev</Link>
         </li>
@@ -23,8 +24,12 @@ function App() {
           "--on": `var(--neon-${color2})`,
           "--backlight": `var(--backlight-${color2})`,
           "--glow": `var(--glow-single-${color2})`,
+          "--filter": `var(--filter-neon-${color2})`
         }}>
-          <Link className={styles["art-link"]} to={"art"}>3D Art</Link>
+          <Link className={styles["art-link"]} to={"art"}>
+            3D Art
+          </Link>
+          <div className={styles["arrow"]}></div>
         </li>
       </ul>
     </div>

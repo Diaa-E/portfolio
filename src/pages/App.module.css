@@ -12,13 +12,19 @@
     display: flex;
     align-content: space-around;
     justify-content: space-around;
+    align-items: center;
 }
 
 .links-wrapper>li{
     display: flex;
     place-items: center;
+    gap: 20px;
     height: min-content;
     background-image: var(--backlight);
+}
+
+.web-item{
+    flex-direction: column;
 }
 
 .art-link, .art-link:visited{
@@ -27,7 +33,7 @@
     color: var(--on);
     filter: drop-shadow(var(--glow));
     border: solid 5px var(--on);
-    padding: 1rem 3rem;
+    padding: 0 3rem;
     border-radius: 2rem;
 }
 
@@ -41,9 +47,21 @@
     filter: var(--filter) drop-shadow(var(--glow));
 }
 
+.globe{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../assets/icons/web.svg");
+    height: 150px;
+    width: 150px;
+    filter: var(--filter) drop-shadow(var(--glow));
+}
+
 .web-link, .web-link:visited{
     font-size: 5rem;
     font-family: var(--font-neon-2);
     color: var(--on);
     filter: drop-shadow(var(--glow));
+    border-bottom: solid 5px var(--on);
+    border-top: solid 5px var(--on);
 }

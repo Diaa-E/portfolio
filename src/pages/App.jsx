@@ -16,7 +16,10 @@ function App() {
           "--backlight": `var(--backlight-${color1})`,
           "--glow": `var(--glow-single-${color1})`,
           "--filter": `var(--filter-neon-${color1})`
-        }}>
+        }}
+          className={styles["web-item"]}
+        >
+          <div className={styles["globe"]}></div>
           <Link className={styles["web-link"]} to={"web"}>Web Dev</Link>
         </li>
         <li style={{
@@ -26,10 +29,10 @@ function App() {
           "--glow": `var(--glow-single-${color2})`,
           "--filter": `var(--filter-neon-${color2})`
         }}>
+          <div className={styles["arrow"]}></div>
           <Link className={styles["art-link"]} to={"art"}>
             3D Art
           </Link>
-          <div className={styles["arrow"]}></div>
         </li>
       </ul>
     </div>

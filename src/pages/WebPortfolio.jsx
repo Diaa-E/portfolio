@@ -2,7 +2,7 @@ import AboutWeb from "../components/AboutWeb";
 import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import WebWork from "../components/WebWork";
 import WebSkills from "../components/WebSkills";
 import Contact from "../components/Contact";

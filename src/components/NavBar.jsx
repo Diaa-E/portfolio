@@ -21,18 +21,20 @@ export default function NavBar({ scrollAnchors = [{to: "#root", text: "root"}], 
 
     useEffect(() => {
 
-        window.addEventListener("resize", () => {
-
+        function handleResize()
+        {
             setInnerWidth(window.innerWidth);
-
+    
             if (window.innerWidth >= 800)
             {
                 document.body.classList.remove(styles["lock-scroll"]);
                 unmountNav();
             }
-        });
+        }
 
-        return () => window.removeEventListener("resize", window);
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
 
     }, []);
 

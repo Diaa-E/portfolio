@@ -18,8 +18,8 @@ export default function WebPortfolio() {
 
     useEffect(() => {
 
-        window.addEventListener("scroll", () => {
-            
+        function handleScroll()
+        {
             // This needs to be in the same order as in the document from top to bottom
             const sections = [
                 aboutRef.current,
@@ -43,9 +43,11 @@ export default function WebPortfolio() {
                     setCurrentSection(section.id);
                 }
             }
-        });
+        }
 
-        return () => window.removeEventListener("scroll", window);
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
 
     }, []);
 

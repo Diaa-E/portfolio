@@ -20,7 +20,13 @@
     place-items: center;
     gap: 20px;
     height: min-content;
-    background-image: var(--backlight);
+    animation-name: backlight-flicker;
+    animation-duration: .1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+    animation-timing-function: linear;
 }
 
 .web-item{
@@ -30,11 +36,17 @@
 .art-link, .art-link:visited{
     font-size: 5rem;
     font-family: var(--font-neon-2);
-    color: var(--on);
-    filter: drop-shadow(var(--glow));
-    border: solid 5px var(--on);
+    color: var(--off);
+    border: solid 5px var(--off);
     padding: 0 3rem;
     border-radius: 2rem;
+    animation-name: flicker;
+    animation-duration: .1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+    animation-timing-function: linear;
 }
 
 .arrow{
@@ -60,8 +72,40 @@
 .web-link, .web-link:visited{
     font-size: 5rem;
     font-family: var(--font-neon-2);
-    color: var(--on);
-    filter: drop-shadow(var(--glow));
-    border-bottom: solid 5px var(--on);
-    border-top: solid 5px var(--on);
+    color: var(--off);
+    border-bottom: solid 5px var(--off);
+    border-top: solid 5px var(--off);
+    animation-name: flicker;
+    animation-duration: .1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+@keyframes flicker {
+    
+    from {
+        filter: none;
+        color: var(--off);
+        border-color: var(--off);
+    }
+
+    to {
+        filter: drop-shadow(var(--glow));
+        color: var(--on);
+        border-color: var(--on);
+    }
+}
+
+@keyframes backlight-flicker {
+    
+    from {
+        background-image: none;
+    }
+
+    to {
+        background-image: var(--backlight);
+    }
 }

@@ -6,50 +6,21 @@ import { useEffect, useRef, useState } from "react";
 import WebWork from "../components/WebWork";
 import WebSkills from "../components/WebSkills";
 import Contact from "../components/Contact";
+import useActiveSection from "../hooks/useActiveSection";
 
 export default function WebPortfolio() {
-
-    const [currentSection, setCurrentSection] = useState();
 
     const aboutRef = useRef(null);
     const workRef = useRef(null);
     const skillsRef = useRef(null);
     const contactRef = useRef(null);
 
-    useEffect(() => {
-
-        function handleScroll()
-        {
-            // This needs to be in the same order as in the document from top to bottom
-            const sections = [
-                aboutRef.current,
-                workRef.current,
-                skillsRef.current,
-                contactRef.current
-            ];
-
-            //Section does not need to be at the very top to be highlighted
-            const sectionBuffer = window.innerHeight / 3;
-
-            //solution stolen from https://codepen.io/stepfray/pen/xxzJrYR
-            //Similar concept to mine but much simpler
-            for (const section of sections)
-            {
-                const scrolltDistance = scrollY;
-                const sectionTop = section.offsetTop;
-
-                if(scrolltDistance >= sectionTop - sectionBuffer)
-                {
-                    setCurrentSection(section.id);
-                }
-            }
-        }
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-
-    }, []);
+    const currentSection = useActiveSection([
+        aboutRef,
+        workRef,
+        skillsRef,
+        contactRef
+    ]);
 
     return (
         <>

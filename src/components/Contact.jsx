@@ -7,11 +7,14 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 export default function Contact()
 {
     const neon1Ref = useRef(null);
+    const emailRef = useRef(null);
+
     const [color] = useState(generateRandomNeonColor());
 
     useIntersectionObserver(
         [
-            neon1Ref
+            neon1Ref,
+            emailRef,
         ],
         generateNeonTextActivator(styles["active"]),
         () => {
@@ -32,12 +35,15 @@ export default function Contact()
                 </h2>
             </div>
             <ul className={styles["contact-list"]}>
-                <li aria-label="email" style={{
+                <li
+                    aria-label="email"
+                    style={{
                         "--color": `var(--neon-${color})`,
                         "--glow": `var(--glow-single-${color})`,
                         "--filter": `var(--filter-neon-${color})`,
                     }}
                     className={styles["contact-item"]}
+                    ref={emailRef}
                 >
                     <div
                         style={{backgroundImage: `url(${emailIcon})`}}

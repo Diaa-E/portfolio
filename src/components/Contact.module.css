@@ -54,8 +54,8 @@
     padding: 5px;
 }
 
-.active{
-    animation-name: flicker;
+.contact-title .active{
+    animation-name: text-flicker;
     animation-duration: .1s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
@@ -63,7 +63,27 @@
     animation-delay: var(--delay);
 }
 
-@keyframes flicker {
+.contact-item.active span{
+    animation-name: text-fade-in;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes text-fade-in {
+    from {
+        transform: translateX(-20px);
+        filter: opacity(0);
+    }
+
+    to {
+        transform: translateX(0);
+        filter: opacity(1);
+    }
+}
+
+@keyframes text-flicker {
     from {
         color: var(--off);
         background-image: none;

@@ -9,7 +9,7 @@ afterEach(() => {
 });
 
 //mock intersection observer
-global.IntersectionObserver = vi.fn().mockReturnValue({
+window.IntersectionObserver = vi.fn().mockReturnValue({
   observe: () => null,
   disconnect: () => null
 })

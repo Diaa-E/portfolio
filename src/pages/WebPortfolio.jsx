@@ -2,7 +2,7 @@ import AboutWeb from "../components/AboutWeb";
 import NavBar from "../components/NavBar";
 import styles from "./WebPortfolio.module.css";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import WebWork from "../components/WebWork";
 import WebSkills from "../components/WebSkills";
 import Contact from "../components/Contact";
@@ -21,6 +21,14 @@ export default function WebPortfolio() {
         skillsRef,
         contactRef
     ]);
+
+    useEffect(() => {
+
+        document.title = "Diaa E. | Web Development";
+    
+        return () => document.title = "";
+        
+      }, []);
 
     return (
         <>

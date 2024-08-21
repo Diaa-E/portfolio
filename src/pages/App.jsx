@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { generateRandomNeonColor } from '../utils/neonTextUtils';
 import styles from './App.module.css';
 
@@ -7,6 +8,15 @@ function App() {
 
   const color1 = generateRandomNeonColor();
   const color2 = generateRandomNeonColor();
+
+  useEffect(() => {
+
+    document.title = "Diaa E.";
+
+    return () => document.title = "";
+    
+  }, []);
+
   return (
     <div className={styles["topic-background"]}>
       <ul className={styles["links-wrapper"]}>

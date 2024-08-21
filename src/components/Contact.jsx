@@ -43,7 +43,7 @@ export default function Contact()
                         style={{backgroundImage: `url(${emailIcon})`}}
                         className={styles["contact-icon"]}
                     ></div>
-                    <span>diaa@loremipsum.com</span>
+                    <span>diaa_e@protonmail.com</span>
                 </li>
             </ul>
         </>

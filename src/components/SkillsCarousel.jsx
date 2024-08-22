@@ -22,7 +22,7 @@ export default function SkillsCarousel({ skills = [] })
                                 aria-label={skill.name}
                                 className={[styles["skill-button"], skills[active].name === skill.name? styles["active"] : ""].join(" ")}
                                 style={{
-                                    backgroundImage: `url(${skill.icon})`,
+                                    backgroundImage: `url("${skill.icon}")`,
                                     "--off": `var(--filter-neon-${skill.color}-off)`,
                                     "--filter": `var(--filter-neon-${skill.color}) drop-shadow(var(--glow-single-${skill.color}))`
                                 }}

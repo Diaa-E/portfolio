@@ -46,7 +46,7 @@ export default function Contact()
                     ref={emailRef}
                 >
                     <div
-                        style={{backgroundImage: `url(${emailIcon})`}}
+                        style={{backgroundImage: `url("${emailIcon}")`}}
                         className={styles["contact-icon"]}
                     ></div>
                     <span>diaa_e@protonmail.com</span>

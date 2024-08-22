@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="210mm"
+   viewBox="0 0 210 210"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       id="filter18"
+       x="-0.06497585"
+       y="-0.14023482"
+       width="1.1299517"
+       height="1.2804696">
+      <feGaussianBlur
+         stdDeviation="5 5"
+         result="blur"
+         id="feGaussianBlur18" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       id="filter19"
+       x="-0.08385875"
+       y="-0.12929398"
+       width="1.1677175"
+       height="1.258588">
+      <feGaussianBlur
+         stdDeviation="5 5"
+         result="blur"
+         id="feGaussianBlur19" />
+    </filter>
+  </defs>
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:119.847px;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script';fill:#ff376a;fill-opacity:1;stroke:none;stroke-width:2.62501;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:7.7;paint-order:markers stroke fill"
+       x="8.7026825"
+       y="113.38931"
+       id="text1"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:BPneon;-inkscape-font-specification:BPneon;fill:#ff376a;fill-opacity:1;stroke:none;stroke-width:2.62501;stroke-opacity:1"
+         x="8.7026825"
+         y="113.38931">open</tspan></text>
+    <path
+       id="path1"
+       style="fill:#ff376a;fill-opacity:1;stroke:#ff376a;stroke-width:8.025;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:7.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       d="M 9.4598877 38.978499 L 198.92894 38.978499 L 9.4598877 38.978499 z M 10.265007 162.82417 L 199.73406 162.82417 L 10.265007 162.82417 z " />
+    <text
+       xml:space="preserve"
+       style="font-size:119.847px;font-family:'Freestyle Script';-inkscape-font-specification:'Freestyle Script';fill:#ff376a;fill-opacity:1;stroke:none;stroke-width:2.62501;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:7.7;paint-order:markers stroke fill;filter:url(#filter18)"
+       x="8.7026825"
+       y="113.38931"
+       id="text18"><tspan
+         id="tspan18"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:BPneon;-inkscape-font-specification:BPneon;fill:#ff376a;fill-opacity:1;stroke:none;stroke-width:2.62501;stroke-opacity:1"
+         x="8.7026825"
+         y="113.38931">open</tspan></text>
+    <path
+       id="path18"
+       style="fill:#ff376a;fill-opacity:1;stroke:#ff376a;stroke-width:8.025;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:7.7;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter19)"
+       d="M 9.4598877 38.978499 L 198.92894 38.978499 L 9.4598877 38.978499 z M 10.265007 162.82417 L 199.73406 162.82417 L 10.265007 162.82417 z " />
+  </g>
+</svg>

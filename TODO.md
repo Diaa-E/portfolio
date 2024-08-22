@@ -1,1 +1,1 @@
-- Write unit tests checking for broken links.
+- ~~Write unit tests checking for broken links. ~~ ❌ => Can't figure a way to do it.

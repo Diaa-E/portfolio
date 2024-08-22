@@ -18,7 +18,7 @@ export default function IconLink({ to, icon, name, color = "blue", textOnRight =
                         id="icon"
                         className={styles["social-link-icon"]}
                         style={{
-                            backgroundImage: `url(${icon})`
+                            backgroundImage: `url("${icon}")`
                         }}
                     >
                     </div>
@@ -41,7 +41,7 @@ export default function IconLink({ to, icon, name, color = "blue", textOnRight =
                     id="icon"
                         className={styles["social-link-icon"]}
                         style={{
-                            backgroundImage: `url(${icon})`
+                            backgroundImage: `url("${icon}")`
                         }}
                     >
                 </div>

@@ -74,8 +74,8 @@ export default function AboutWeb()
             </ul>
             <p ref={bioRef} className={styles["bio"]}>
                 It was my first year in college pursuing a degree in Electrical Engineering. On that year,
-                we had many courses over a wide spectrum of topics, one of which was a programming course,
-                I found myself scoring high in that programming course with a fraction of the effort I put into
+                we had many courses over a wide spectrum of topics, one of which was a programming course in which 
+                I found myself scoring high with a fraction of the effort I put into
                 anything else, that is when I knew this path is for me...
             </p>
         </>

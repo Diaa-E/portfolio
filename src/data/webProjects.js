@@ -42,8 +42,8 @@ export const webProjects = [
         livePreview: "https://diaa-e.github.io/3d-model-data-sheet-generator/",
         source: "https://github.com/Diaa-E/3d-model-data-sheet-generator",
         image: threedModelDataSheetGeneratorImage,
-        description: "A tool for generating 3D model description for different marketplaces.",
-        tenRating: 5,
+        description: "A tool for generating 3D model description for various marketplaces.",
+        tenRating: 8,
         color: generateRandomNeonColor(),
     },
     {
